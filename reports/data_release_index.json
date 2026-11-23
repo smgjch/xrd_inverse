@@ -1,0 +1,457 @@
+{
+  "protocol": "xrdbench-0.2.0",
+  "preset": "pilot",
+  "releases": [
+    {
+      "task": "rutile",
+      "track": "blind",
+      "suite": "v0.1",
+      "dataset_id": "b8a1be217dba633437ce160e3f1bba9b9f5e4f1c96046b6d8c5f2c8135e2795d",
+      "relative_path": "rutile/blind/v0.1",
+      "generator": {
+        "package": "0.2.0",
+        "source_sha256": "9da4cbb07c21370396ed7ef0c1fb50fe9a037779d21fa5f989769105eff52bd9",
+        "python": "3.11.2",
+        "versions": {
+          "numpy": "1.26.4",
+          "scipy": "1.14.1",
+          "pymatgen": "2024.11.13",
+          "spglib": "2.5.0",
+          "monty": "2024.10.21"
+        }
+      },
+      "sizes": {
+        "train": {
+          "structure_count": 5000,
+          "observation_count": 10000
+        },
+        "val": {
+          "structure_count": 512,
+          "observation_count": 3072
+        },
+        "test": {
+          "structure_count": 512,
+          "observation_count": 5632
+        }
+      }
+    },
+    {
+      "task": "rutile",
+      "track": "blind",
+      "suite": "v0.1+v0.2",
+      "dataset_id": "73a358b50688e514a8d7f95d45069edc70a5c23bcbd2ab5b9127cef3b62111c3",
+      "relative_path": "rutile/blind/v0.1+v0.2",
+      "generator": {
+        "package": "0.2.0",
+        "source_sha256": "9da4cbb07c21370396ed7ef0c1fb50fe9a037779d21fa5f989769105eff52bd9",
+        "python": "3.11.2",
+        "versions": {
+          "numpy": "1.26.4",
+          "scipy": "1.14.1",
+          "pymatgen": "2024.11.13",
+          "spglib": "2.5.0",
+          "monty": "2024.10.21"
+        }
+      },
+      "sizes": {
+        "train": {
+          "structure_count": 5000,
+          "observation_count": 10000
+        },
+        "val": {
+          "structure_count": 512,
+          "observation_count": 6144
+        },
+        "test": {
+          "structure_count": 512,
+          "observation_count": 8704
+        }
+      }
+    },
+    {
+      "task": "rutile",
+      "track": "blind",
+      "suite": "v0.2",
+      "dataset_id": "1844b32757804f2a456fd8c278d8e1b2bd435d6f3dae7fe1f2e0034caff05030",
+      "relative_path": "rutile/blind/v0.2",
+      "generator": {
+        "package": "0.2.0",
+        "source_sha256": "9da4cbb07c21370396ed7ef0c1fb50fe9a037779d21fa5f989769105eff52bd9",
+        "python": "3.11.2",
+        "versions": {
+          "numpy": "1.26.4",
+          "scipy": "1.14.1",
+          "pymatgen": "2024.11.13",
+          "spglib": "2.5.0",
+          "monty": "2024.10.21"
+        }
+      },
+      "sizes": {
+        "train": {
+          "structure_count": 5000,
+          "observation_count": 10000
+        },
+        "val": {
+          "structure_count": 512,
+          "observation_count": 3072
+        },
+        "test": {
+          "structure_count": 512,
+          "observation_count": 3072
+        }
+      }
+    },
+    {
+      "task": "rutile",
+      "track": "calibrated",
+      "suite": "v0.1",
+      "dataset_id": "0a041b78c104290d697f470d8825170d8fb396a60aa216da56958b45f6ad37a9",
+      "relative_path": "rutile/calibrated/v0.1",
+      "generator": {
+        "package": "0.2.0",
+        "source_sha256": "9da4cbb07c21370396ed7ef0c1fb50fe9a037779d21fa5f989769105eff52bd9",
+        "python": "3.11.2",
+        "versions": {
+          "numpy": "1.26.4",
+          "scipy": "1.14.1",
+          "pymatgen": "2024.11.13",
+          "spglib": "2.5.0",
+          "monty": "2024.10.21"
+        }
+      },
+      "sizes": {
+        "train": {
+          "structure_count": 5000,
+          "observation_count": 10000
+        },
+        "val": {
+          "structure_count": 512,
+          "observation_count": 3072
+        },
+        "test": {
+          "structure_count": 512,
+          "observation_count": 5632
+        }
+      }
+    },
+    {
+      "task": "rutile",
+      "track": "calibrated",
+      "suite": "v0.1+v0.2",
+      "dataset_id": "ba010c8282fd41e39fa44afa822ba0658ce29e8a99edd171a1b262ea3e39513d",
+      "relative_path": "rutile/calibrated/v0.1+v0.2",
+      "generator": {
+        "package": "0.2.0",
+        "source_sha256": "9da4cbb07c21370396ed7ef0c1fb50fe9a037779d21fa5f989769105eff52bd9",
+        "python": "3.11.2",
+        "versions": {
+          "numpy": "1.26.4",
+          "scipy": "1.14.1",
+          "pymatgen": "2024.11.13",
+          "spglib": "2.5.0",
+          "monty": "2024.10.21"
+        }
+      },
+      "sizes": {
+        "train": {
+          "structure_count": 5000,
+          "observation_count": 10000
+        },
+        "val": {
+          "structure_count": 512,
+          "observation_count": 6144
+        },
+        "test": {
+          "structure_count": 512,
+          "observation_count": 8704
+        }
+      }
+    },
+    {
+      "task": "rutile",
+      "track": "calibrated",
+      "suite": "v0.2",
+      "dataset_id": "5c1f74a2ea02ea4d11aff3cd536a468629ed72fd1ff54129b3b69dbf2f1f79ba",
+      "relative_path": "rutile/calibrated/v0.2",
+      "generator": {
+        "package": "0.2.0",
+        "source_sha256": "9da4cbb07c21370396ed7ef0c1fb50fe9a037779d21fa5f989769105eff52bd9",
+        "python": "3.11.2",
+        "versions": {
+          "numpy": "1.26.4",
+          "scipy": "1.14.1",
+          "pymatgen": "2024.11.13",
+          "spglib": "2.5.0",
+          "monty": "2024.10.21"
+        }
+      },
+      "sizes": {
+        "train": {
+          "structure_count": 5000,
+          "observation_count": 10000
+        },
+        "val": {
+          "structure_count": 512,
+          "observation_count": 3072
+        },
+        "test": {
+          "structure_count": 512,
+          "observation_count": 3072
+        }
+      }
+    },
+    {
+      "task": "zno",
+      "track": "blind",
+      "suite": "v0.1",
+      "dataset_id": "2d9c58011b3ef2ef496755d00d28a431af9cc7597f6dd8487f1f74dcbc576f43",
+      "relative_path": "zno/blind/v0.1",
+      "generator": {
+        "package": "0.2.0",
+        "source_sha256": "9da4cbb07c21370396ed7ef0c1fb50fe9a037779d21fa5f989769105eff52bd9",
+        "python": "3.11.2",
+        "versions": {
+          "numpy": "1.26.4",
+          "scipy": "1.14.1",
+          "pymatgen": "2024.11.13",
+          "spglib": "2.5.0",
+          "monty": "2024.10.21"
+        }
+      },
+      "sizes": {
+        "train": {
+          "structure_count": 5000,
+          "observation_count": 10000
+        },
+        "val": {
+          "structure_count": 512,
+          "observation_count": 3072
+        },
+        "test": {
+          "structure_count": 512,
+          "observation_count": 5632
+        }
+      }
+    },
+    {
+      "task": "zno",
+      "track": "blind",
+      "suite": "v0.1+v0.2",
+      "dataset_id": "5df6908713053b0a12f33d25bebd5207637bc079107f43bdea72dc5dc445a968",
+      "relative_path": "zno/blind/v0.1+v0.2",
+      "generator": {
+        "package": "0.2.0",
+        "source_sha256": "9da4cbb07c21370396ed7ef0c1fb50fe9a037779d21fa5f989769105eff52bd9",
+        "python": "3.11.2",
+        "versions": {
+          "numpy": "1.26.4",
+          "scipy": "1.14.1",
+          "pymatgen": "2024.11.13",
+          "spglib": "2.5.0",
+          "monty": "2024.10.21"
+        }
+      },
+      "sizes": {
+        "train": {
+          "structure_count": 5000,
+          "observation_count": 10000
+        },
+        "val": {
+          "structure_count": 512,
+          "observation_count": 6144
+        },
+        "test": {
+          "structure_count": 512,
+          "observation_count": 8704
+        }
+      }
+    },
+    {
+      "task": "zno",
+      "track": "blind",
+      "suite": "v0.2",
+      "dataset_id": "8fa51072a72a98b041e067410cde067afc944124171def62e00fac4c443edd6e",
+      "relative_path": "zno/blind/v0.2",
+      "generator": {
+        "package": "0.2.0",
+        "source_sha256": "9da4cbb07c21370396ed7ef0c1fb50fe9a037779d21fa5f989769105eff52bd9",
+        "python": "3.11.2",
+        "versions": {
+          "numpy": "1.26.4",
+          "scipy": "1.14.1",
+          "pymatgen": "2024.11.13",
+          "spglib": "2.5.0",
+          "monty": "2024.10.21"
+        }
+      },
+      "sizes": {
+        "train": {
+          "structure_count": 5000,
+          "observation_count": 10000
+        },
+        "val": {
+          "structure_count": 512,
+          "observation_count": 3072
+        },
+        "test": {
+          "structure_count": 512,
+          "observation_count": 3072
+        }
+      }
+    },
+    {
+      "task": "zno",
+      "track": "calibrated",
+      "suite": "v0.1",
+      "dataset_id": "99bdd7794df54d993b298e7ecde42e9d773b71e4aea7b07a68ec39f5dd6f4706",
+      "relative_path": "zno/calibrated/v0.1",
+      "generator": {
+        "package": "0.2.0",
+        "source_sha256": "9da4cbb07c21370396ed7ef0c1fb50fe9a037779d21fa5f989769105eff52bd9",
+        "python": "3.11.2",
+        "versions": {
+          "numpy": "1.26.4",
+          "scipy": "1.14.1",
+          "pymatgen": "2024.11.13",
+          "spglib": "2.5.0",
+          "monty": "2024.10.21"
+        }
+      },
+      "sizes": {
+        "train": {
+          "structure_count": 5000,
+          "observation_count": 10000
+        },
+        "val": {
+          "structure_count": 512,
+          "observation_count": 3072
+        },
+        "test": {
+          "structure_count": 512,
+          "observation_count": 5632
+        }
+      }
+    },
+    {
+      "task": "zno",
+      "track": "calibrated",
+      "suite": "v0.1+v0.2",
+      "dataset_id": "2f9fccf9fa421c399884bfbc967e558fd882ad4d7d361210e9b786c763e0673d",
+      "relative_path": "zno/calibrated/v0.1+v0.2",
+      "generator": {
+        "package": "0.2.0",
+        "source_sha256": "9da4cbb07c21370396ed7ef0c1fb50fe9a037779d21fa5f989769105eff52bd9",
+        "python": "3.11.2",
+        "versions": {
+          "numpy": "1.26.4",
+          "scipy": "1.14.1",
+          "pymatgen": "2024.11.13",
+          "spglib": "2.5.0",
+          "monty": "2024.10.21"
+        }
+      },
+      "sizes": {
+        "train": {
+          "structure_count": 5000,
+          "observation_count": 10000
+        },
+        "val": {
+          "structure_count": 512,
+          "observation_count": 6144
+        },
+        "test": {
+          "structure_count": 512,
+          "observation_count": 8704
+        }
+      }
+    },
+    {
+      "task": "zno",
+      "track": "calibrated",
+      "suite": "v0.2",
+      "dataset_id": "20b07b1721031e6585a5b2a770574055ba73f4d783e1f23e1e178ee1b68738c3",
+      "relative_path": "zno/calibrated/v0.2",
+      "generator": {
+        "package": "0.2.0",
+        "source_sha256": "9da4cbb07c21370396ed7ef0c1fb50fe9a037779d21fa5f989769105eff52bd9",
+        "python": "3.11.2",
+        "versions": {
+          "numpy": "1.26.4",
+          "scipy": "1.14.1",
+          "pymatgen": "2024.11.13",
+          "spglib": "2.5.0",
+          "monty": "2024.10.21"
+        }
+      },
+      "sizes": {
+        "train": {
+          "structure_count": 5000,
+          "observation_count": 10000
+        },
+        "val": {
+          "structure_count": 512,
+          "observation_count": 3072
+        },
+        "test": {
+          "structure_count": 512,
+          "observation_count": 3072
+        }
+      }
+    }
+  ],
+  "baseline_results": "awaiting_collaborators",
+  "training_runs_executed": 0,
+  "copy_verification": {
+    "sha256_every_file": true,
+    "file_count": 1926,
+    "bytes": 376484088,
+    "metadata_revisions_sha256_verified": true
+  },
+  "generator_snapshot": {
+    "path": "generator_snapshot.tar.gz",
+    "sha256": "9e88f62b05be756bac86a242df67a233dfd54bc4c231d52ed4ea0ea3f65f83ae",
+    "note": "Immutable source at data-generation time; later evaluator/docs updates do not rewrite dataset identities."
+  },
+  "metadata_revisions": [
+    {
+      "release": "rutile/blind/v0.1+v0.2",
+      "old_dataset_id": "7d9a87fab6dafddee7eeb80b0218ffb63b49eeccc7483a6e1f0b215f399598bd",
+      "dataset_id": "73a358b50688e514a8d7f95d45069edc70a5c23bcbd2ab5b9127cef3b62111c3"
+    },
+    {
+      "release": "rutile/blind/v0.2",
+      "old_dataset_id": "9f39b7305f37bb0986809f53ef9bfdf534333c64c1b171aad6b29fe167f7a785",
+      "dataset_id": "1844b32757804f2a456fd8c278d8e1b2bd435d6f3dae7fe1f2e0034caff05030"
+    },
+    {
+      "release": "rutile/calibrated/v0.1+v0.2",
+      "old_dataset_id": "460314877c8677cc0e693503e1bb2765c4320154b9a46429a1086e89e7f45ebe",
+      "dataset_id": "ba010c8282fd41e39fa44afa822ba0658ce29e8a99edd171a1b262ea3e39513d"
+    },
+    {
+      "release": "rutile/calibrated/v0.2",
+      "old_dataset_id": "7beba1e594da57cf12f711eed26b6728549187a41f063f0dd5583e6b53cbc9df",
+      "dataset_id": "5c1f74a2ea02ea4d11aff3cd536a468629ed72fd1ff54129b3b69dbf2f1f79ba"
+    },
+    {
+      "release": "zno/blind/v0.1+v0.2",
+      "old_dataset_id": "3dca3f264fff75f1ee7ca4309dd1aedc74515e8d6c09f2b7264ddf38cc0eb69b",
+      "dataset_id": "5df6908713053b0a12f33d25bebd5207637bc079107f43bdea72dc5dc445a968"
+    },
+    {
+      "release": "zno/blind/v0.2",
+      "old_dataset_id": "7eab92ba42752856f9db0b58720fed0747484bf7186ee6c7fe040496e769a200",
+      "dataset_id": "8fa51072a72a98b041e067410cde067afc944124171def62e00fac4c443edd6e"
+    },
+    {
+      "release": "zno/calibrated/v0.1+v0.2",
+      "old_dataset_id": "d53906367e68b0b6bd6ef3026df6f452315d2d559046b934e80f3f0307fdf8a4",
+      "dataset_id": "2f9fccf9fa421c399884bfbc967e558fd882ad4d7d361210e9b786c763e0673d"
+    },
+    {
+      "release": "zno/calibrated/v0.2",
+      "old_dataset_id": "efce59fb821cb79b279f7f077699b41bcbc27b70b995f0db538ea291152a1ff4",
+      "dataset_id": "20b07b1721031e6585a5b2a770574055ba73f4d783e1f23e1e178ee1b68738c3"
+    }
+  ]
+}

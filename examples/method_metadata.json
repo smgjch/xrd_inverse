@@ -1,0 +1,23 @@
+{
+  "method_name": "REPLACE_WITH_METHOD_NAME",
+  "implementation": "adapted_from_official_or_own_implementation",
+  "source_repository": "REPLACE_WITH_UPSTREAM_URL_OR_NONE",
+  "code_commit": "REPLACE_WITH_COMMIT_OR_SOURCE_HASH",
+  "training_dataset_id": "REPLACE_WITH_PUBLIC_MANIFEST_DATASET_ID",
+  "training_suite": "v0.1+v0.2",
+  "training_seed": 0,
+  "unique_train_structures": 5000,
+  "train_observations": 10000,
+  "extra_simulations": 0,
+  "external_pretraining": false,
+  "postprocessing": "none",
+  "point_rule": "direct_regression",
+  "hardware": "REPLACE_WITH_MEASURED_HARDWARE",
+  "training_wall_seconds": null,
+  "hyperparameter_trials": 0,
+  "trainable_parameters": null,
+  "precision": "float32",
+  "checkpoint_selection": "validation_only",
+  "hyperparameters": {},
+  "notes": "Replace template fields before submitting; unreported costs are not eligible for efficiency claims."
+}

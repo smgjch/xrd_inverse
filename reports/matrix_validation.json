@@ -1,0 +1,665 @@
+{
+  "passed": true,
+  "training_performed": false,
+  "releases": [
+    {
+      "task": "rutile",
+      "track": "calibrated",
+      "suite": "v0.1",
+      "passed": true,
+      "dataset_id": "0a041b78c104290d697f470d8825170d8fb396a60aa216da56958b45f6ad37a9",
+      "splits": {
+        "train": {
+          "observations": 10000,
+          "structures": 5000,
+          "conditions": [
+            "block30",
+            "block50",
+            "full_high",
+            "full_low",
+            "full_standard",
+            "window25_45"
+          ]
+        },
+        "val": {
+          "observations": 3072,
+          "structures": 512,
+          "conditions": [
+            "block30",
+            "block50",
+            "full_high",
+            "full_low",
+            "full_standard",
+            "window25_45"
+          ]
+        },
+        "test": {
+          "observations": 5632,
+          "structures": 512,
+          "conditions": [
+            "block30",
+            "block50",
+            "broad_ood",
+            "drop30_ood",
+            "full_high",
+            "full_low",
+            "full_standard",
+            "no_signal_stress",
+            "voigt_ood",
+            "window25_45",
+            "window26_30_stress"
+          ]
+        }
+      }
+    },
+    {
+      "task": "rutile",
+      "track": "calibrated",
+      "suite": "v0.2",
+      "passed": true,
+      "dataset_id": "5c1f74a2ea02ea4d11aff3cd536a468629ed72fd1ff54129b3b69dbf2f1f79ba",
+      "splits": {
+        "train": {
+          "observations": 10000,
+          "structures": 5000,
+          "conditions": [
+            "hard_mixed_e100",
+            "hard_mixed_e1000",
+            "hard_mixed_e300",
+            "hard_paired_e100",
+            "hard_paired_e1000",
+            "hard_paired_e300"
+          ]
+        },
+        "val": {
+          "observations": 3072,
+          "structures": 512,
+          "conditions": [
+            "hard_mixed_e100",
+            "hard_mixed_e1000",
+            "hard_mixed_e300",
+            "hard_paired_e100",
+            "hard_paired_e1000",
+            "hard_paired_e300"
+          ]
+        },
+        "test": {
+          "observations": 3072,
+          "structures": 512,
+          "conditions": [
+            "hard_mixed_e100",
+            "hard_mixed_e1000",
+            "hard_mixed_e300",
+            "hard_paired_e100",
+            "hard_paired_e1000",
+            "hard_paired_e300"
+          ]
+        }
+      }
+    },
+    {
+      "task": "rutile",
+      "track": "calibrated",
+      "suite": "v0.1+v0.2",
+      "passed": true,
+      "dataset_id": "ba010c8282fd41e39fa44afa822ba0658ce29e8a99edd171a1b262ea3e39513d",
+      "splits": {
+        "train": {
+          "observations": 10000,
+          "structures": 5000,
+          "conditions": [
+            "block30",
+            "block50",
+            "full_high",
+            "full_low",
+            "full_standard",
+            "hard_mixed_e100",
+            "hard_mixed_e1000",
+            "hard_mixed_e300",
+            "hard_paired_e100",
+            "hard_paired_e1000",
+            "hard_paired_e300",
+            "window25_45"
+          ]
+        },
+        "val": {
+          "observations": 6144,
+          "structures": 512,
+          "conditions": [
+            "block30",
+            "block50",
+            "full_high",
+            "full_low",
+            "full_standard",
+            "hard_mixed_e100",
+            "hard_mixed_e1000",
+            "hard_mixed_e300",
+            "hard_paired_e100",
+            "hard_paired_e1000",
+            "hard_paired_e300",
+            "window25_45"
+          ]
+        },
+        "test": {
+          "observations": 8704,
+          "structures": 512,
+          "conditions": [
+            "block30",
+            "block50",
+            "broad_ood",
+            "drop30_ood",
+            "full_high",
+            "full_low",
+            "full_standard",
+            "hard_mixed_e100",
+            "hard_mixed_e1000",
+            "hard_mixed_e300",
+            "hard_paired_e100",
+            "hard_paired_e1000",
+            "hard_paired_e300",
+            "no_signal_stress",
+            "voigt_ood",
+            "window25_45",
+            "window26_30_stress"
+          ]
+        }
+      }
+    },
+    {
+      "task": "rutile",
+      "track": "blind",
+      "suite": "v0.1",
+      "passed": true,
+      "dataset_id": "b8a1be217dba633437ce160e3f1bba9b9f5e4f1c96046b6d8c5f2c8135e2795d",
+      "splits": {
+        "train": {
+          "observations": 10000,
+          "structures": 5000,
+          "conditions": [
+            "block30",
+            "block50",
+            "full_high",
+            "full_low",
+            "full_standard",
+            "window25_45"
+          ]
+        },
+        "val": {
+          "observations": 3072,
+          "structures": 512,
+          "conditions": [
+            "block30",
+            "block50",
+            "full_high",
+            "full_low",
+            "full_standard",
+            "window25_45"
+          ]
+        },
+        "test": {
+          "observations": 5632,
+          "structures": 512,
+          "conditions": [
+            "block30",
+            "block50",
+            "broad_ood",
+            "drop30_ood",
+            "full_high",
+            "full_low",
+            "full_standard",
+            "no_signal_stress",
+            "voigt_ood",
+            "window25_45",
+            "window26_30_stress"
+          ]
+        }
+      }
+    },
+    {
+      "task": "rutile",
+      "track": "blind",
+      "suite": "v0.2",
+      "passed": true,
+      "dataset_id": "1844b32757804f2a456fd8c278d8e1b2bd435d6f3dae7fe1f2e0034caff05030",
+      "splits": {
+        "train": {
+          "observations": 10000,
+          "structures": 5000,
+          "conditions": [
+            "hard_mixed_e100",
+            "hard_mixed_e1000",
+            "hard_mixed_e300",
+            "hard_paired_e100",
+            "hard_paired_e1000",
+            "hard_paired_e300"
+          ]
+        },
+        "val": {
+          "observations": 3072,
+          "structures": 512,
+          "conditions": [
+            "hard_mixed_e100",
+            "hard_mixed_e1000",
+            "hard_mixed_e300",
+            "hard_paired_e100",
+            "hard_paired_e1000",
+            "hard_paired_e300"
+          ]
+        },
+        "test": {
+          "observations": 3072,
+          "structures": 512,
+          "conditions": [
+            "hard_mixed_e100",
+            "hard_mixed_e1000",
+            "hard_mixed_e300",
+            "hard_paired_e100",
+            "hard_paired_e1000",
+            "hard_paired_e300"
+          ]
+        }
+      }
+    },
+    {
+      "task": "rutile",
+      "track": "blind",
+      "suite": "v0.1+v0.2",
+      "passed": true,
+      "dataset_id": "73a358b50688e514a8d7f95d45069edc70a5c23bcbd2ab5b9127cef3b62111c3",
+      "splits": {
+        "train": {
+          "observations": 10000,
+          "structures": 5000,
+          "conditions": [
+            "block30",
+            "block50",
+            "full_high",
+            "full_low",
+            "full_standard",
+            "hard_mixed_e100",
+            "hard_mixed_e1000",
+            "hard_mixed_e300",
+            "hard_paired_e100",
+            "hard_paired_e1000",
+            "hard_paired_e300",
+            "window25_45"
+          ]
+        },
+        "val": {
+          "observations": 6144,
+          "structures": 512,
+          "conditions": [
+            "block30",
+            "block50",
+            "full_high",
+            "full_low",
+            "full_standard",
+            "hard_mixed_e100",
+            "hard_mixed_e1000",
+            "hard_mixed_e300",
+            "hard_paired_e100",
+            "hard_paired_e1000",
+            "hard_paired_e300",
+            "window25_45"
+          ]
+        },
+        "test": {
+          "observations": 8704,
+          "structures": 512,
+          "conditions": [
+            "block30",
+            "block50",
+            "broad_ood",
+            "drop30_ood",
+            "full_high",
+            "full_low",
+            "full_standard",
+            "hard_mixed_e100",
+            "hard_mixed_e1000",
+            "hard_mixed_e300",
+            "hard_paired_e100",
+            "hard_paired_e1000",
+            "hard_paired_e300",
+            "no_signal_stress",
+            "voigt_ood",
+            "window25_45",
+            "window26_30_stress"
+          ]
+        }
+      }
+    },
+    {
+      "task": "zno",
+      "track": "calibrated",
+      "suite": "v0.1",
+      "passed": true,
+      "dataset_id": "99bdd7794df54d993b298e7ecde42e9d773b71e4aea7b07a68ec39f5dd6f4706",
+      "splits": {
+        "train": {
+          "observations": 10000,
+          "structures": 5000,
+          "conditions": [
+            "block30",
+            "block50",
+            "full_high",
+            "full_low",
+            "full_standard",
+            "window25_45"
+          ]
+        },
+        "val": {
+          "observations": 3072,
+          "structures": 512,
+          "conditions": [
+            "block30",
+            "block50",
+            "full_high",
+            "full_low",
+            "full_standard",
+            "window25_45"
+          ]
+        },
+        "test": {
+          "observations": 5632,
+          "structures": 512,
+          "conditions": [
+            "block30",
+            "block50",
+            "broad_ood",
+            "drop30_ood",
+            "full_high",
+            "full_low",
+            "full_standard",
+            "no_signal_stress",
+            "voigt_ood",
+            "window25_45",
+            "window26_30_stress"
+          ]
+        }
+      }
+    },
+    {
+      "task": "zno",
+      "track": "calibrated",
+      "suite": "v0.2",
+      "passed": true,
+      "dataset_id": "20b07b1721031e6585a5b2a770574055ba73f4d783e1f23e1e178ee1b68738c3",
+      "splits": {
+        "train": {
+          "observations": 10000,
+          "structures": 5000,
+          "conditions": [
+            "hard_mixed_e100",
+            "hard_mixed_e1000",
+            "hard_mixed_e300",
+            "hard_paired_e100",
+            "hard_paired_e1000",
+            "hard_paired_e300"
+          ]
+        },
+        "val": {
+          "observations": 3072,
+          "structures": 512,
+          "conditions": [
+            "hard_mixed_e100",
+            "hard_mixed_e1000",
+            "hard_mixed_e300",
+            "hard_paired_e100",
+            "hard_paired_e1000",
+            "hard_paired_e300"
+          ]
+        },
+        "test": {
+          "observations": 3072,
+          "structures": 512,
+          "conditions": [
+            "hard_mixed_e100",
+            "hard_mixed_e1000",
+            "hard_mixed_e300",
+            "hard_paired_e100",
+            "hard_paired_e1000",
+            "hard_paired_e300"
+          ]
+        }
+      }
+    },
+    {
+      "task": "zno",
+      "track": "calibrated",
+      "suite": "v0.1+v0.2",
+      "passed": true,
+      "dataset_id": "2f9fccf9fa421c399884bfbc967e558fd882ad4d7d361210e9b786c763e0673d",
+      "splits": {
+        "train": {
+          "observations": 10000,
+          "structures": 5000,
+          "conditions": [
+            "block30",
+            "block50",
+            "full_high",
+            "full_low",
+            "full_standard",
+            "hard_mixed_e100",
+            "hard_mixed_e1000",
+            "hard_mixed_e300",
+            "hard_paired_e100",
+            "hard_paired_e1000",
+            "hard_paired_e300",
+            "window25_45"
+          ]
+        },
+        "val": {
+          "observations": 6144,
+          "structures": 512,
+          "conditions": [
+            "block30",
+            "block50",
+            "full_high",
+            "full_low",
+            "full_standard",
+            "hard_mixed_e100",
+            "hard_mixed_e1000",
+            "hard_mixed_e300",
+            "hard_paired_e100",
+            "hard_paired_e1000",
+            "hard_paired_e300",
+            "window25_45"
+          ]
+        },
+        "test": {
+          "observations": 8704,
+          "structures": 512,
+          "conditions": [
+            "block30",
+            "block50",
+            "broad_ood",
+            "drop30_ood",
+            "full_high",
+            "full_low",
+            "full_standard",
+            "hard_mixed_e100",
+            "hard_mixed_e1000",
+            "hard_mixed_e300",
+            "hard_paired_e100",
+            "hard_paired_e1000",
+            "hard_paired_e300",
+            "no_signal_stress",
+            "voigt_ood",
+            "window25_45",
+            "window26_30_stress"
+          ]
+        }
+      }
+    },
+    {
+      "task": "zno",
+      "track": "blind",
+      "suite": "v0.1",
+      "passed": true,
+      "dataset_id": "2d9c58011b3ef2ef496755d00d28a431af9cc7597f6dd8487f1f74dcbc576f43",
+      "splits": {
+        "train": {
+          "observations": 10000,
+          "structures": 5000,
+          "conditions": [
+            "block30",
+            "block50",
+            "full_high",
+            "full_low",
+            "full_standard",
+            "window25_45"
+          ]
+        },
+        "val": {
+          "observations": 3072,
+          "structures": 512,
+          "conditions": [
+            "block30",
+            "block50",
+            "full_high",
+            "full_low",
+            "full_standard",
+            "window25_45"
+          ]
+        },
+        "test": {
+          "observations": 5632,
+          "structures": 512,
+          "conditions": [
+            "block30",
+            "block50",
+            "broad_ood",
+            "drop30_ood",
+            "full_high",
+            "full_low",
+            "full_standard",
+            "no_signal_stress",
+            "voigt_ood",
+            "window25_45",
+            "window26_30_stress"
+          ]
+        }
+      }
+    },
+    {
+      "task": "zno",
+      "track": "blind",
+      "suite": "v0.2",
+      "passed": true,
+      "dataset_id": "8fa51072a72a98b041e067410cde067afc944124171def62e00fac4c443edd6e",
+      "splits": {
+        "train": {
+          "observations": 10000,
+          "structures": 5000,
+          "conditions": [
+            "hard_mixed_e100",
+            "hard_mixed_e1000",
+            "hard_mixed_e300",
+            "hard_paired_e100",
+            "hard_paired_e1000",
+            "hard_paired_e300"
+          ]
+        },
+        "val": {
+          "observations": 3072,
+          "structures": 512,
+          "conditions": [
+            "hard_mixed_e100",
+            "hard_mixed_e1000",
+            "hard_mixed_e300",
+            "hard_paired_e100",
+            "hard_paired_e1000",
+            "hard_paired_e300"
+          ]
+        },
+        "test": {
+          "observations": 3072,
+          "structures": 512,
+          "conditions": [
+            "hard_mixed_e100",
+            "hard_mixed_e1000",
+            "hard_mixed_e300",
+            "hard_paired_e100",
+            "hard_paired_e1000",
+            "hard_paired_e300"
+          ]
+        }
+      }
+    },
+    {
+      "task": "zno",
+      "track": "blind",
+      "suite": "v0.1+v0.2",
+      "passed": true,
+      "dataset_id": "5df6908713053b0a12f33d25bebd5207637bc079107f43bdea72dc5dc445a968",
+      "splits": {
+        "train": {
+          "observations": 10000,
+          "structures": 5000,
+          "conditions": [
+            "block30",
+            "block50",
+            "full_high",
+            "full_low",
+            "full_standard",
+            "hard_mixed_e100",
+            "hard_mixed_e1000",
+            "hard_mixed_e300",
+            "hard_paired_e100",
+            "hard_paired_e1000",
+            "hard_paired_e300",
+            "window25_45"
+          ]
+        },
+        "val": {
+          "observations": 6144,
+          "structures": 512,
+          "conditions": [
+            "block30",
+            "block50",
+            "full_high",
+            "full_low",
+            "full_standard",
+            "hard_mixed_e100",
+            "hard_mixed_e1000",
+            "hard_mixed_e300",
+            "hard_paired_e100",
+            "hard_paired_e1000",
+            "hard_paired_e300",
+            "window25_45"
+          ]
+        },
+        "test": {
+          "observations": 8704,
+          "structures": 512,
+          "conditions": [
+            "block30",
+            "block50",
+            "broad_ood",
+            "drop30_ood",
+            "full_high",
+            "full_low",
+            "full_standard",
+            "hard_mixed_e100",
+            "hard_mixed_e1000",
+            "hard_mixed_e300",
+            "hard_paired_e100",
+            "hard_paired_e1000",
+            "hard_paired_e300",
+            "no_signal_stress",
+            "voigt_ood",
+            "window25_45",
+            "window26_30_stress"
+          ]
+        }
+      }
+    }
+  ],
+  "checks": [
+    "file_hashes",
+    "split_isolation",
+    "fixed_training_budget",
+    "union_exact_observation_reuse",
+    "v0.2_paired_instrument_information"
+  ]
+}

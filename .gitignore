@@ -1,0 +1,64 @@
+# Python, environments and editor caches
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage*
+htmlcov/
+.venv*/
+venv/
+build/
+dist/
+.DS_Store
+.idea/
+.vscode/
+
+# Generated datasets, predictions and model weights (publish separately)
+/data/
+/datasets/
+/releases/
+/runs/
+/outputs/
+/predictions/
+/checkpoints/
+/cache/
+/tmp/
+*.npz
+*.npy
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.h5
+*.hdf5
+*.tar
+*.tar.gz
+*.zip
+*.log
+*.jsonl
+
+# Local credentials and deployment details
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+.ssh/
+.merlin/
+.codex/
+/deployment/
+/local/
+*.local.json
+*.local.yaml
+
+# Historical machine-specific smoke artifacts; public results live in reports/
+/validation.json
+/validation_pytest.txt
+/artifact_manifest.json
+/docs/验证记录.md
+
+# Keep source, lockfiles, CIF text, docs, and report CSV/JSON/Markdown.

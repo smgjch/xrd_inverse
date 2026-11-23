@@ -1,0 +1,41 @@
+{
+  "software_version": "0.2.0",
+  "recorded_at_utc": "2026-11-23T15:08:16.611422+00:00",
+  "automated_tests": {
+    "passed": 22,
+    "elapsed_seconds": 31.23,
+    "command": "python -m pytest -q"
+  },
+  "editable_install": "passed with standard PEP 517 build isolation",
+  "legacy_v01": {
+    "six_npz_files_all_arrays_identical": true,
+    "historical_submission_accepted": true
+  },
+  "union_cli_run_score_summarize": "passed using PriorSampler as an integration-only negative control",
+  "full_pilot_matrix": {
+    "releases": 12,
+    "passed": true,
+    "fixed_budget": true,
+    "union_observations_exactly_reused": true,
+    "v02_calibrated_blind_observations_paired": true
+  },
+  "nas_copy": {
+    "sha256_every_file": true,
+    "file_count": 1926,
+    "bytes": 376484088,
+    "metadata_revisions_sha256_verified": true
+  },
+  "gitignore": {
+    "large_data_and_models_excluded": true,
+    "credentials_and_private_deployment_excluded": true,
+    "public_report_csv_json_retained": true
+  },
+  "training_runs_executed": 0,
+  "accelerator_jobs_submitted": 0,
+  "baseline_results": "awaiting collaborator submissions",
+  "limitations": [
+    "No trained baseline performance is claimed.",
+    "Blind shared physical candidate selection is not implemented; raw parameter/posterior scoring is supported.",
+    "No certified global multimodality or real-experiment generalization claim."
+  ]
+}
