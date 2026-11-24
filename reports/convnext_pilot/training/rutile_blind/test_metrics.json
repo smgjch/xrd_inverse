@@ -1,0 +1,869 @@
+{
+  "protocol": "xrdbench-0.2.0",
+  "suite": "v0.1+v0.2",
+  "task": "rutile",
+  "id_conditions": [
+    "full_high",
+    "full_standard",
+    "full_low",
+    "block30",
+    "block50",
+    "window25_45",
+    "hard_mixed_e100",
+    "hard_mixed_e300",
+    "hard_mixed_e1000",
+    "hard_paired_e100",
+    "hard_paired_e300",
+    "hard_paired_e1000"
+  ],
+  "dataset_id": "73a358b50688e514a8d7f95d45069edc70a5c23bcbd2ab5b9127cef3b62111c3",
+  "submission_sha256": "1f673ada2daf6c595d0a1c8ac8c773d6fe4c2be5ee10931c03f22420c93027f8",
+  "validation": {
+    "passed": true,
+    "dataset_id": "73a358b50688e514a8d7f95d45069edc70a5c23bcbd2ab5b9127cef3b62111c3",
+    "kind": "point",
+    "split": "test",
+    "view": "full",
+    "observations": 8704,
+    "method": "ConvNeXt1D-Lattice"
+  },
+  "track": "blind",
+  "preset": "pilot",
+  "method_metadata": {
+    "method_name": "ConvNeXt1D-Lattice",
+    "implementation": "adapted_convnext_block_with_benchmark_stem_and_position_preserving_head",
+    "source_repository": "https://github.com/AdvancedPhotonSource/OpenAlphaDiffract",
+    "upstream_commit": "ec118b9d899f57e8971a7ad4d4aa23b3f38572e0",
+    "code_commit": "b1af71357c1f849d4a1d6715bdaaaade68f120f065f5b3ba741615fc9d21cfe5",
+    "training_dataset_id": "73a358b50688e514a8d7f95d45069edc70a5c23bcbd2ab5b9127cef3b62111c3",
+    "training_suite": "v0.1+v0.2",
+    "training_seed": 0,
+    "unique_train_structures": 5000,
+    "train_observations": 10000,
+    "extra_simulations": 0,
+    "external_pretraining": false,
+    "postprocessing": "none",
+    "point_rule": "direct_regression",
+    "hardware": "Ascend910B2C",
+    "precision": "float32",
+    "hyperparameter_trials": 1,
+    "trainable_parameters": 3085282,
+    "checkpoint_selection": "minimum_validation_normalized_mae",
+    "hyperparameters": {
+      "model": {
+        "dims": [
+          48,
+          96,
+          192
+        ],
+        "depths": [
+          2,
+          2,
+          4
+        ],
+        "kernel_size": 7,
+        "pool_bins": 16,
+        "head_dim": 512,
+        "dropout": 0.1,
+        "drop_path": 0.05,
+        "layer_scale": 0.001,
+        "input_bins": 4096,
+        "output_dim": 2
+      },
+      "epochs_limit": 100,
+      "batch_size": 128,
+      "learning_rate": 0.0005,
+      "weight_decay": 0.01,
+      "loss": "SmoothL1",
+      "huber_beta": 0.02,
+      "warmup_epochs": 3,
+      "schedule": "cosine",
+      "patience": 20,
+      "max_seconds": 3500.0
+    },
+    "notes": "Pilot seed-0 architecture adaptation; no original AlphaDiffract performance reproduction claim.",
+    "training_wall_seconds": 302.81768807023764,
+    "checkpoint_sha256": "ba1fbab8f21e429d5d251e43319dc85f75acf269462085a0d5de6cb0ba129ccb",
+    "selected_epoch": 77,
+    "optimizer_steps": 7663,
+    "adapter": "xrdbench.convnext:Adapter",
+    "inference_seed": 0,
+    "batch_size": 128
+  },
+  "parameter_order": [
+    "a",
+    "c"
+  ],
+  "point_rule": "direct_regression",
+  "primary_id_macro": {
+    "n_observations": 6144,
+    "n_structures": 512,
+    "mae_angstrom": [
+      0.01275303901167898,
+      0.005944205318365428
+    ],
+    "rmse_angstrom": [
+      0.03045303795294862,
+      0.010084519229129606
+    ],
+    "absolute_relative_error": [
+      0.002803855030824304,
+      0.0020103042848932822
+    ],
+    "normalized_mae": 0.023926309022935886,
+    "max_relative_error": 0.0034205004404066625,
+    "out_of_prior": 0.0,
+    "success_rel_0.001": 0.2716471354166667,
+    "success_rel_0.005": 0.8697916666666666,
+    "success_rel_0.01": 0.9217122395833334,
+    "failure_rate": 0.0,
+    "oracle_best_max_relative_error_at_1": 0.0034205004404066625,
+    "oracle_success_rel_0.001_at_1": 0.2716471354166667,
+    "oracle_success_rel_0.005_at_1": 0.8697916666666666,
+    "oracle_success_rel_0.01_at_1": 0.9217122395833334,
+    "p95_max_relative_error": 0.015077639526693984,
+    "normalized_mae_cluster_ci95": {
+      "mean": 0.02392630902293589,
+      "ci95": [
+        0.022794094792064085,
+        0.025033034235170056
+      ],
+      "n_independent_structures": 512,
+      "bootstrap_repeats": 2000
+    }
+  },
+  "by_domain": {
+    "v0.1": {
+      "n_observations": 3072,
+      "n_structures": 512,
+      "mae_angstrom": [
+        0.004157088900123147,
+        0.003157446111802255
+      ],
+      "rmse_angstrom": [
+        0.005792343446793653,
+        0.0057287749849653765
+      ],
+      "absolute_relative_error": [
+        0.0009067815101494514,
+        0.0010666730621327804
+      ],
+      "normalized_mae": 0.009860639154330208,
+      "max_relative_error": 0.001395777615654097,
+      "out_of_prior": 0.0,
+      "success_rel_0.001": 0.4378255208333333,
+      "success_rel_0.005": 0.9830729166666666,
+      "success_rel_0.01": 0.9954427083333334,
+      "failure_rate": 0.0,
+      "oracle_best_max_relative_error_at_1": 0.001395777615654097,
+      "oracle_success_rel_0.001_at_1": 0.4378255208333333,
+      "oracle_success_rel_0.005_at_1": 0.9830729166666666,
+      "oracle_success_rel_0.01_at_1": 0.9954427083333334,
+      "p95_max_relative_error": 0.0031920811811337224,
+      "normalized_mae_cluster_ci95": {
+        "mean": 0.009860639154330206,
+        "ci95": [
+          0.009527031310191047,
+          0.010235442344107688
+        ],
+        "n_independent_structures": 512,
+        "bootstrap_repeats": 2000
+      }
+    },
+    "v0.2": {
+      "n_observations": 3072,
+      "n_structures": 512,
+      "mae_angstrom": [
+        0.02134898912323467,
+        0.008730964524928608
+      ],
+      "rmse_angstrom": [
+        0.04267579874497774,
+        0.013060482124983137
+      ],
+      "absolute_relative_error": [
+        0.0047009285514991485,
+        0.0029539355076537888
+      ],
+      "normalized_mae": 0.037991978891541565,
+      "max_relative_error": 0.005445223265159227,
+      "out_of_prior": 0.0,
+      "success_rel_0.001": 0.10546875,
+      "success_rel_0.005": 0.7565104166666666,
+      "success_rel_0.01": 0.8479817708333334,
+      "failure_rate": 0.0,
+      "oracle_best_max_relative_error_at_1": 0.005445223265159227,
+      "oracle_success_rel_0.001_at_1": 0.10546875,
+      "oracle_success_rel_0.005_at_1": 0.7565104166666666,
+      "oracle_success_rel_0.01_at_1": 0.8479817708333334,
+      "p95_max_relative_error": 0.02169944860024419,
+      "normalized_mae_cluster_ci95": {
+        "mean": 0.037991978891541565,
+        "ci95": [
+          0.03579535247191998,
+          0.04017474051162977
+        ],
+        "n_independent_structures": 512,
+        "bootstrap_repeats": 2000
+      }
+    }
+  },
+  "by_condition": {
+    "block30": {
+      "n_observations": 512,
+      "n_structures": 512,
+      "mae_angstrom": [
+        0.00528894363236684,
+        0.004029394420646923
+      ],
+      "rmse_angstrom": [
+        0.006756956045626499,
+        0.0053598590081376084
+      ],
+      "absolute_relative_error": [
+        0.0011536595528961623,
+        0.0013634859651471575
+      ],
+      "normalized_mae": 0.01256613610895155,
+      "max_relative_error": 0.0017526417270338516,
+      "out_of_prior": 0.0,
+      "success_rel_0.001": 0.28125,
+      "success_rel_0.005": 0.982421875,
+      "success_rel_0.01": 1.0,
+      "failure_rate": 0.0,
+      "oracle_best_max_relative_error_at_1": 0.0017526417270338516,
+      "oracle_success_rel_0.001_at_1": 0.28125,
+      "oracle_success_rel_0.005_at_1": 0.982421875,
+      "oracle_success_rel_0.01_at_1": 1.0,
+      "p95_max_relative_error": 0.003936011797771874,
+      "normalized_mae_cluster_ci95": {
+        "mean": 0.01256613610895155,
+        "ci95": [
+          0.0118696668021277,
+          0.013296331370494473
+        ],
+        "n_independent_structures": 512,
+        "bootstrap_repeats": 2000
+      }
+    },
+    "block50": {
+      "n_observations": 512,
+      "n_structures": 512,
+      "mae_angstrom": [
+        0.005927608958691193,
+        0.005974146532506139
+      ],
+      "rmse_angstrom": [
+        0.009135219999823536,
+        0.011715167923542446
+      ],
+      "absolute_relative_error": [
+        0.0012944861165917324,
+        0.002009107902802222
+      ],
+      "normalized_mae": 0.01654778724590041,
+      "max_relative_error": 0.002461712495604708,
+      "out_of_prior": 0.0,
+      "success_rel_0.001": 0.23828125,
+      "success_rel_0.005": 0.916015625,
+      "success_rel_0.01": 0.97265625,
+      "failure_rate": 0.0,
+      "oracle_best_max_relative_error_at_1": 0.002461712495604708,
+      "oracle_success_rel_0.001_at_1": 0.23828125,
+      "oracle_success_rel_0.005_at_1": 0.916015625,
+      "oracle_success_rel_0.01_at_1": 0.97265625,
+      "p95_max_relative_error": 0.006717647994542804,
+      "normalized_mae_cluster_ci95": {
+        "mean": 0.01654778724590041,
+        "ci95": [
+          0.01494316876108462,
+          0.018410007962741143
+        ],
+        "n_independent_structures": 512,
+        "bootstrap_repeats": 2000
+      }
+    },
+    "broad_ood": {
+      "n_observations": 512,
+      "n_structures": 512,
+      "mae_angstrom": [
+        0.005348385943182238,
+        0.0037243058601914864
+      ],
+      "rmse_angstrom": [
+        0.006593529864882847,
+        0.004803651822237967
+      ],
+      "absolute_relative_error": [
+        0.0011679628261875969,
+        0.001258146461123972
+      ],
+      "normalized_mae": 0.012115257192306873,
+      "max_relative_error": 0.001633773318619178,
+      "out_of_prior": 0.0,
+      "success_rel_0.001": 0.3046875,
+      "success_rel_0.005": 1.0,
+      "success_rel_0.01": 1.0,
+      "failure_rate": 0.0,
+      "oracle_best_max_relative_error_at_1": 0.001633773318619178,
+      "oracle_success_rel_0.001_at_1": 0.3046875,
+      "oracle_success_rel_0.005_at_1": 1.0,
+      "oracle_success_rel_0.01_at_1": 1.0,
+      "p95_max_relative_error": 0.003461788198949341,
+      "normalized_mae_cluster_ci95": {
+        "mean": 0.012115257192306873,
+        "ci95": [
+          0.01150856980688201,
+          0.012738619971486748
+        ],
+        "n_independent_structures": 512,
+        "bootstrap_repeats": 2000
+      }
+    },
+    "drop30_ood": {
+      "n_observations": 512,
+      "n_structures": 512,
+      "mae_angstrom": [
+        0.04405891904906377,
+        0.03604796497715529
+      ],
+      "rmse_angstrom": [
+        0.06500164537899508,
+        0.05892661895083082
+      ],
+      "absolute_relative_error": [
+        0.009664211067001254,
+        0.012057044946897053
+      ],
+      "normalized_mae": 0.10887439552451483,
+      "max_relative_error": 0.016476631818598195,
+      "out_of_prior": 0.0,
+      "success_rel_0.001": 0.017578125,
+      "success_rel_0.005": 0.236328125,
+      "success_rel_0.01": 0.474609375,
+      "failure_rate": 0.0,
+      "oracle_best_max_relative_error_at_1": 0.016476631818598195,
+      "oracle_success_rel_0.001_at_1": 0.017578125,
+      "oracle_success_rel_0.005_at_1": 0.236328125,
+      "oracle_success_rel_0.01_at_1": 0.474609375,
+      "p95_max_relative_error": 0.04945735867132804,
+      "normalized_mae_cluster_ci95": {
+        "mean": 0.10887439552451483,
+        "ci95": [
+          0.10045174978949886,
+          0.11830692843909073
+        ],
+        "n_independent_structures": 512,
+        "bootstrap_repeats": 2000
+      }
+    },
+    "full_high": {
+      "n_observations": 512,
+      "n_structures": 512,
+      "mae_angstrom": [
+        0.0030177709718601804,
+        0.0020080387715004653
+      ],
+      "rmse_angstrom": [
+        0.0037326937644043072,
+        0.002439922997040285
+      ],
+      "absolute_relative_error": [
+        0.0006581481203734936,
+        0.0006790333817461085
+      ],
+      "normalized_mae": 0.006678132178379012,
+      "max_relative_error": 0.0009189079468379778,
+      "out_of_prior": 0.0,
+      "success_rel_0.001": 0.61328125,
+      "success_rel_0.005": 1.0,
+      "success_rel_0.01": 1.0,
+      "failure_rate": 0.0,
+      "oracle_best_max_relative_error_at_1": 0.0009189079468379778,
+      "oracle_success_rel_0.001_at_1": 0.61328125,
+      "oracle_success_rel_0.005_at_1": 1.0,
+      "oracle_success_rel_0.01_at_1": 1.0,
+      "p95_max_relative_error": 0.0017593029627624747,
+      "normalized_mae_cluster_ci95": {
+        "mean": 0.006678132178379012,
+        "ci95": [
+          0.006385388145967031,
+          0.006982323707505006
+        ],
+        "n_independent_structures": 512,
+        "bootstrap_repeats": 2000
+      }
+    },
+    "full_low": {
+      "n_observations": 512,
+      "n_structures": 512,
+      "mae_angstrom": [
+        0.0037631297553402353,
+        0.00245956428705505
+      ],
+      "rmse_angstrom": [
+        0.004616761197269697,
+        0.003002932635408365
+      ],
+      "absolute_relative_error": [
+        0.0008200550903077259,
+        0.00083349716953121
+      ],
+      "normalized_mae": 0.0082524630166239,
+      "max_relative_error": 0.0011434516752082144,
+      "out_of_prior": 0.0,
+      "success_rel_0.001": 0.474609375,
+      "success_rel_0.005": 1.0,
+      "success_rel_0.01": 1.0,
+      "failure_rate": 0.0,
+      "oracle_best_max_relative_error_at_1": 0.0011434516752082144,
+      "oracle_success_rel_0.001_at_1": 0.474609375,
+      "oracle_success_rel_0.005_at_1": 1.0,
+      "oracle_success_rel_0.01_at_1": 1.0,
+      "p95_max_relative_error": 0.0022400486172681863,
+      "normalized_mae_cluster_ci95": {
+        "mean": 0.0082524630166239,
+        "ci95": [
+          0.007889596677720323,
+          0.00860966694039915
+        ],
+        "n_independent_structures": 512,
+        "bootstrap_repeats": 2000
+      }
+    },
+    "full_standard": {
+      "n_observations": 512,
+      "n_structures": 512,
+      "mae_angstrom": [
+        0.003375332442754545,
+        0.0019150657121628206
+      ],
+      "rmse_angstrom": [
+        0.004188600062702008,
+        0.0024225116743986277
+      ],
+      "absolute_relative_error": [
+        0.0007353267176163385,
+        0.0006479134577017083
+      ],
+      "normalized_mae": 0.006910200876493996,
+      "max_relative_error": 0.0009506744587160941,
+      "out_of_prior": 0.0,
+      "success_rel_0.001": 0.564453125,
+      "success_rel_0.005": 1.0,
+      "success_rel_0.01": 1.0,
+      "failure_rate": 0.0,
+      "oracle_best_max_relative_error_at_1": 0.0009506744587160941,
+      "oracle_success_rel_0.001_at_1": 0.564453125,
+      "oracle_success_rel_0.005_at_1": 1.0,
+      "oracle_success_rel_0.01_at_1": 1.0,
+      "p95_max_relative_error": 0.0018534307337272223,
+      "normalized_mae_cluster_ci95": {
+        "mean": 0.006910200876493996,
+        "ci95": [
+          0.0065779361644649325,
+          0.0072594094540043876
+        ],
+        "n_independent_structures": 512,
+        "bootstrap_repeats": 2000
+      }
+    },
+    "hard_mixed_e100": {
+      "n_observations": 512,
+      "n_structures": 512,
+      "mae_angstrom": [
+        0.05119870961939475,
+        0.015192606656377054
+      ],
+      "rmse_angstrom": [
+        0.077827121667293,
+        0.021848756051166738
+      ],
+      "absolute_relative_error": [
+        0.011228665125416279,
+        0.0051398699163216245
+      ],
+      "normalized_mae": 0.0814015560800461,
+      "max_relative_error": 0.011519366293560743,
+      "out_of_prior": 0.0,
+      "success_rel_0.001": 0.041015625,
+      "success_rel_0.005": 0.439453125,
+      "success_rel_0.01": 0.609375,
+      "failure_rate": 0.0,
+      "oracle_best_max_relative_error_at_1": 0.011519366293560743,
+      "oracle_success_rel_0.001_at_1": 0.041015625,
+      "oracle_success_rel_0.005_at_1": 0.439453125,
+      "oracle_success_rel_0.01_at_1": 0.609375,
+      "p95_max_relative_error": 0.03489259884856543,
+      "normalized_mae_cluster_ci95": {
+        "mean": 0.0814015560800461,
+        "ci95": [
+          0.07376554132262228,
+          0.0890108525671789
+        ],
+        "n_independent_structures": 512,
+        "bootstrap_repeats": 2000
+      }
+    },
+    "hard_mixed_e1000": {
+      "n_observations": 512,
+      "n_structures": 512,
+      "mae_angstrom": [
+        0.029270549909743652,
+        0.009428657609051691
+      ],
+      "rmse_angstrom": [
+        0.04674279897033176,
+        0.013488485892536128
+      ],
+      "absolute_relative_error": [
+        0.006492472826562161,
+        0.0031868982257976966
+      ],
+      "normalized_mae": 0.047793233159736714,
+      "max_relative_error": 0.006836649677896878,
+      "out_of_prior": 0.0,
+      "success_rel_0.001": 0.095703125,
+      "success_rel_0.005": 0.6171875,
+      "success_rel_0.01": 0.75390625,
+      "failure_rate": 0.0,
+      "oracle_best_max_relative_error_at_1": 0.006836649677896878,
+      "oracle_success_rel_0.001_at_1": 0.095703125,
+      "oracle_success_rel_0.005_at_1": 0.6171875,
+      "oracle_success_rel_0.01_at_1": 0.75390625,
+      "p95_max_relative_error": 0.024030615088471353,
+      "normalized_mae_cluster_ci95": {
+        "mean": 0.047793233159736714,
+        "ci95": [
+          0.04310402028154932,
+          0.052463640472783936
+        ],
+        "n_independent_structures": 512,
+        "bootstrap_repeats": 2000
+      }
+    },
+    "hard_mixed_e300": {
+      "n_observations": 512,
+      "n_structures": 512,
+      "mae_angstrom": [
+        0.033345507768997106,
+        0.010879235314143965
+      ],
+      "rmse_angstrom": [
+        0.05069210231215795,
+        0.015001077689123087
+      ],
+      "absolute_relative_error": [
+        0.007379587578070371,
+        0.0036782657630095314
+      ],
+      "normalized_mae": 0.054679986513832865,
+      "max_relative_error": 0.007788828279228898,
+      "out_of_prior": 0.0,
+      "success_rel_0.001": 0.04296875,
+      "success_rel_0.005": 0.568359375,
+      "success_rel_0.01": 0.724609375,
+      "failure_rate": 0.0,
+      "oracle_best_max_relative_error_at_1": 0.007788828279228898,
+      "oracle_success_rel_0.001_at_1": 0.04296875,
+      "oracle_success_rel_0.005_at_1": 0.568359375,
+      "oracle_success_rel_0.01_at_1": 0.724609375,
+      "p95_max_relative_error": 0.02356823885646399,
+      "normalized_mae_cluster_ci95": {
+        "mean": 0.054679986513832865,
+        "ci95": [
+          0.04985132192781395,
+          0.05989704224072531
+        ],
+        "n_independent_structures": 512,
+        "bootstrap_repeats": 2000
+      }
+    },
+    "hard_paired_e100": {
+      "n_observations": 512,
+      "n_structures": 512,
+      "mae_angstrom": [
+        0.005303916780200875,
+        0.006378862212642494
+      ],
+      "rmse_angstrom": [
+        0.007021840030646936,
+        0.007674982926522661
+      ],
+      "absolute_relative_error": [
+        0.0011533283424674699,
+        0.002161184658633036
+      ],
+      "normalized_mae": 0.016552872958738182,
+      "max_relative_error": 0.0024334107318426516,
+      "out_of_prior": 0.0,
+      "success_rel_0.001": 0.134765625,
+      "success_rel_0.005": 0.943359375,
+      "success_rel_0.01": 1.0,
+      "failure_rate": 0.0,
+      "oracle_best_max_relative_error_at_1": 0.0024334107318426516,
+      "oracle_success_rel_0.001_at_1": 0.134765625,
+      "oracle_success_rel_0.005_at_1": 0.943359375,
+      "oracle_success_rel_0.01_at_1": 1.0,
+      "p95_max_relative_error": 0.005072891511208764,
+      "normalized_mae_cluster_ci95": {
+        "mean": 0.016552872958738182,
+        "ci95": [
+          0.015832972992131357,
+          0.017312226287393474
+        ],
+        "n_independent_structures": 512,
+        "bootstrap_repeats": 2000
+      }
+    },
+    "hard_paired_e1000": {
+      "n_observations": 512,
+      "n_structures": 512,
+      "mae_angstrom": [
+        0.00450647119904064,
+        0.005075136693913476
+      ],
+      "rmse_angstrom": [
+        0.005743210857749051,
+        0.006065668873045538
+      ],
+      "absolute_relative_error": [
+        0.0009798778770469662,
+        0.001718483834808291
+      ],
+      "normalized_mae": 0.01348168885540972,
+      "max_relative_error": 0.0019818652547776137,
+      "out_of_prior": 0.0,
+      "success_rel_0.001": 0.15625,
+      "success_rel_0.005": 0.9921875,
+      "success_rel_0.01": 1.0,
+      "failure_rate": 0.0,
+      "oracle_best_max_relative_error_at_1": 0.0019818652547776137,
+      "oracle_success_rel_0.001_at_1": 0.15625,
+      "oracle_success_rel_0.005_at_1": 0.9921875,
+      "oracle_success_rel_0.01_at_1": 1.0,
+      "p95_max_relative_error": 0.004071272926354609,
+      "normalized_mae_cluster_ci95": {
+        "mean": 0.01348168885540972,
+        "ci95": [
+          0.012954067647711977,
+          0.014009486168377104
+        ],
+        "n_independent_structures": 512,
+        "bootstrap_repeats": 2000
+      }
+    },
+    "hard_paired_e300": {
+      "n_observations": 512,
+      "n_structures": 512,
+      "mae_angstrom": [
+        0.004468779462031261,
+        0.00543128866344311
+      ],
+      "rmse_angstrom": [
+        0.005780373978882558,
+        0.006589365199359593
+      ],
+      "absolute_relative_error": [
+        0.000971639559431617,
+        0.0018389106473525548
+      ],
+      "normalized_mae": 0.014042535781485826,
+      "max_relative_error": 0.0021112193536485767,
+      "out_of_prior": 0.0,
+      "success_rel_0.001": 0.162109375,
+      "success_rel_0.005": 0.978515625,
+      "success_rel_0.01": 1.0,
+      "failure_rate": 0.0,
+      "oracle_best_max_relative_error_at_1": 0.0021112193536485767,
+      "oracle_success_rel_0.001_at_1": 0.162109375,
+      "oracle_success_rel_0.005_at_1": 0.978515625,
+      "oracle_success_rel_0.01_at_1": 1.0,
+      "p95_max_relative_error": 0.004150306595660541,
+      "normalized_mae_cluster_ci95": {
+        "mean": 0.014042535781485826,
+        "ci95": [
+          0.013445680402864535,
+          0.014684785173152545
+        ],
+        "n_independent_structures": 512,
+        "bootstrap_repeats": 2000
+      }
+    },
+    "no_signal_stress": {
+      "n_observations": 512,
+      "n_structures": 512,
+      "mae_angstrom": [
+        0.12042170057109183,
+        0.07744490730094503
+      ],
+      "rmse_angstrom": [
+        0.14308654775245636,
+        0.08961325875561371
+      ],
+      "absolute_relative_error": [
+        0.026546999200544007,
+        0.02602929348332712
+      ],
+      "normalized_mae": 0.2619492451075497,
+      "max_relative_error": 0.035652688049601755,
+      "out_of_prior": 0.0,
+      "success_rel_0.001": 0.001953125,
+      "success_rel_0.005": 0.01171875,
+      "success_rel_0.01": 0.04296875,
+      "failure_rate": 0.0,
+      "oracle_best_max_relative_error_at_1": 0.035652688049601755,
+      "oracle_success_rel_0.001_at_1": 0.001953125,
+      "oracle_success_rel_0.005_at_1": 0.01171875,
+      "oracle_success_rel_0.01_at_1": 0.04296875,
+      "p95_max_relative_error": 0.05931006589993436,
+      "normalized_mae_cluster_ci95": {
+        "mean": 0.2619492451075497,
+        "ci95": [
+          0.2520520113006948,
+          0.2716053303288033
+        ],
+        "n_independent_structures": 512,
+        "bootstrap_repeats": 2000
+      }
+    },
+    "voigt_ood": {
+      "n_observations": 512,
+      "n_structures": 512,
+      "mae_angstrom": [
+        0.0031423407569175638,
+        0.0021672421993463803
+      ],
+      "rmse_angstrom": [
+        0.0039041971597036087,
+        0.0027143814831319156
+      ],
+      "absolute_relative_error": [
+        0.0006860186891691849,
+        0.0007340350380021005
+      ],
+      "normalized_mae": 0.007082762684688564,
+      "max_relative_error": 0.0009739488885870038,
+      "out_of_prior": 0.0,
+      "success_rel_0.001": 0.576171875,
+      "success_rel_0.005": 1.0,
+      "success_rel_0.01": 1.0,
+      "failure_rate": 0.0,
+      "oracle_best_max_relative_error_at_1": 0.0009739488885870038,
+      "oracle_success_rel_0.001_at_1": 0.576171875,
+      "oracle_success_rel_0.005_at_1": 1.0,
+      "oracle_success_rel_0.01_at_1": 1.0,
+      "p95_max_relative_error": 0.0020048788425673695,
+      "normalized_mae_cluster_ci95": {
+        "mean": 0.007082762684688564,
+        "ci95": [
+          0.00672605166185289,
+          0.007429567299390751
+        ],
+        "n_independent_structures": 512,
+        "bootstrap_repeats": 2000
+      }
+    },
+    "window25_45": {
+      "n_observations": 512,
+      "n_structures": 512,
+      "mae_angstrom": [
+        0.003569747639725918,
+        0.002558466946942113
+      ],
+      "rmse_angstrom": [
+        0.004405326209177979,
+        0.0031781342717692325
+      ],
+      "absolute_relative_error": [
+        0.0007790134631112691,
+        0.0008670004958682655
+      ],
+      "normalized_mae": 0.00820911549963237,
+      "max_relative_error": 0.0011472773905237378,
+      "out_of_prior": 0.0,
+      "success_rel_0.001": 0.455078125,
+      "success_rel_0.005": 1.0,
+      "success_rel_0.01": 1.0,
+      "failure_rate": 0.0,
+      "oracle_best_max_relative_error_at_1": 0.0011472773905237378,
+      "oracle_success_rel_0.001_at_1": 0.455078125,
+      "oracle_success_rel_0.005_at_1": 1.0,
+      "oracle_success_rel_0.01_at_1": 1.0,
+      "p95_max_relative_error": 0.0021840969709664235,
+      "normalized_mae_cluster_ci95": {
+        "mean": 0.00820911549963237,
+        "ci95": [
+          0.007817096227719202,
+          0.00862802271589127
+        ],
+        "n_independent_structures": 512,
+        "bootstrap_repeats": 2000
+      }
+    },
+    "window26_30_stress": {
+      "n_observations": 512,
+      "n_structures": 512,
+      "mae_angstrom": [
+        0.03026655284924018,
+        0.07962924001762828
+      ],
+      "rmse_angstrom": [
+        0.03797028589996719,
+        0.09219449847356127
+      ],
+      "absolute_relative_error": [
+        0.0066592571700126715,
+        0.02673768359611182
+      ],
+      "normalized_mae": 0.16751149751481803,
+      "max_relative_error": 0.027435060440789277,
+      "out_of_prior": 0.0,
+      "success_rel_0.001": 0.0,
+      "success_rel_0.005": 0.029296875,
+      "success_rel_0.01": 0.126953125,
+      "failure_rate": 0.0,
+      "oracle_best_max_relative_error_at_1": 0.027435060440789277,
+      "oracle_success_rel_0.001_at_1": 0.0,
+      "oracle_success_rel_0.005_at_1": 0.029296875,
+      "oracle_success_rel_0.01_at_1": 0.126953125,
+      "p95_max_relative_error": 0.05191957466920948,
+      "normalized_mae_cluster_ci95": {
+        "mean": 0.16751149751481803,
+        "ci95": [
+          0.16059495797515216,
+          0.17435153841417278
+        ],
+        "n_independent_structures": 512,
+        "bootstrap_repeats": 2000
+      }
+    }
+  },
+  "inference_timing": {
+    "source": "runner_wall_clock",
+    "verified_by_runner": true,
+    "adapter_load_seconds": 0.10353101044893265,
+    "warmup_seconds": 0.014457265846431255,
+    "model_total_seconds": 0.8272365881130099,
+    "model_seconds_per_observation": 9.504096830342485e-05,
+    "pipeline_seconds_including_read_hash_and_write": 1.6719123115763068,
+    "n_observations": 8704,
+    "excludes": [
+      "training",
+      "dataset_generation",
+      "coordinator_physics_scoring"
+    ]
+  },
+  "interpretation": {
+    "main_table_eligible_size": false,
+    "training_and_external_data_eligibility": "Coordinator must audit method_metadata; runner cannot verify training provenance",
+    "oracle": "Uses true labels to select the best candidate; not deployment top-1",
+    "rank_histograms": "SBC interpretation for prior-predictive ID only; OOD/stress ranks are diagnostics (no_signal has exact prior reference)",
+    "rectangle_coverage": "Intersection of marginal intervals; NOT a nominal-alpha joint credible region",
+    "ci": "Structure-cluster bootstrap conditional on trained model; not training-seed uncertainty",
+    "energy": "Normalized prior-width units; unbiased independent-pair sample estimator can be negative by Monte Carlo noise"
+  },
+  "physics_selection": {
+    "enabled": false
+  }
+}

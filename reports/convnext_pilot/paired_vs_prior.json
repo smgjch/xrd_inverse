@@ -1,0 +1,386 @@
+[
+  {
+    "task": "rutile",
+    "track": "blind",
+    "evaluation_suite": "v0.1",
+    "mean": -0.24278682392584428,
+    "ci95": [
+      -0.2512069348291863,
+      -0.2343154279754331
+    ],
+    "n_independent_structures": 512,
+    "bootstrap_repeats": 2000,
+    "dataset_id": "73a358b50688e514a8d7f95d45069edc70a5c23bcbd2ab5b9127cef3b62111c3",
+    "split": "test",
+    "view": "full",
+    "metric": "normalized_mae",
+    "condition": "v0.1",
+    "difference": "A minus B",
+    "lower_is_better": true,
+    "seed_counts": [
+      1,
+      1
+    ],
+    "per_seed_means": [
+      [
+        0.009860639154330208
+      ],
+      [
+        0.2526474630801745
+      ]
+    ],
+    "uncertainty": "CI resamples structures after averaging runs; training variation is shown separately, not combined"
+  },
+  {
+    "task": "rutile",
+    "track": "blind",
+    "evaluation_suite": "v0.2",
+    "mean": -0.2146554841886329,
+    "ci95": [
+      -0.22357121856373113,
+      -0.20601308166079288
+    ],
+    "n_independent_structures": 512,
+    "bootstrap_repeats": 2000,
+    "dataset_id": "73a358b50688e514a8d7f95d45069edc70a5c23bcbd2ab5b9127cef3b62111c3",
+    "split": "test",
+    "view": "full",
+    "metric": "normalized_mae",
+    "condition": "v0.2",
+    "difference": "A minus B",
+    "lower_is_better": true,
+    "seed_counts": [
+      1,
+      1
+    ],
+    "per_seed_means": [
+      [
+        0.037991978891541565
+      ],
+      [
+        0.2526474630801745
+      ]
+    ],
+    "uncertainty": "CI resamples structures after averaging runs; training variation is shown separately, not combined"
+  },
+  {
+    "task": "rutile",
+    "track": "blind",
+    "evaluation_suite": "v0.1+v0.2",
+    "mean": -0.22872115405723858,
+    "ci95": [
+      -0.23743492797991136,
+      -0.22029954092289242
+    ],
+    "n_independent_structures": 512,
+    "bootstrap_repeats": 2000,
+    "dataset_id": "73a358b50688e514a8d7f95d45069edc70a5c23bcbd2ab5b9127cef3b62111c3",
+    "split": "test",
+    "view": "full",
+    "metric": "normalized_mae",
+    "condition": "v0.1+v0.2",
+    "difference": "A minus B",
+    "lower_is_better": true,
+    "seed_counts": [
+      1,
+      1
+    ],
+    "per_seed_means": [
+      [
+        0.023926309022935886
+      ],
+      [
+        0.2526474630801745
+      ]
+    ],
+    "uncertainty": "CI resamples structures after averaging runs; training variation is shown separately, not combined"
+  },
+  {
+    "task": "rutile",
+    "track": "calibrated",
+    "evaluation_suite": "v0.1",
+    "mean": -0.2447816442624231,
+    "ci95": [
+      -0.2532142631325576,
+      -0.23628414888254132
+    ],
+    "n_independent_structures": 512,
+    "bootstrap_repeats": 2000,
+    "dataset_id": "ba010c8282fd41e39fa44afa822ba0658ce29e8a99edd171a1b262ea3e39513d",
+    "split": "test",
+    "view": "full",
+    "metric": "normalized_mae",
+    "condition": "v0.1",
+    "difference": "A minus B",
+    "lower_is_better": true,
+    "seed_counts": [
+      1,
+      1
+    ],
+    "per_seed_means": [
+      [
+        0.007865818817751396
+      ],
+      [
+        0.2526474630801745
+      ]
+    ],
+    "uncertainty": "CI resamples structures after averaging runs; training variation is shown separately, not combined"
+  },
+  {
+    "task": "rutile",
+    "track": "calibrated",
+    "evaluation_suite": "v0.2",
+    "mean": -0.22008924275379535,
+    "ci95": [
+      -0.22889733474505042,
+      -0.21146487392730212
+    ],
+    "n_independent_structures": 512,
+    "bootstrap_repeats": 2000,
+    "dataset_id": "ba010c8282fd41e39fa44afa822ba0658ce29e8a99edd171a1b262ea3e39513d",
+    "split": "test",
+    "view": "full",
+    "metric": "normalized_mae",
+    "condition": "v0.2",
+    "difference": "A minus B",
+    "lower_is_better": true,
+    "seed_counts": [
+      1,
+      1
+    ],
+    "per_seed_means": [
+      [
+        0.03255822032637912
+      ],
+      [
+        0.2526474630801745
+      ]
+    ],
+    "uncertainty": "CI resamples structures after averaging runs; training variation is shown separately, not combined"
+  },
+  {
+    "task": "rutile",
+    "track": "calibrated",
+    "evaluation_suite": "v0.1+v0.2",
+    "mean": -0.23243544350810924,
+    "ci95": [
+      -0.2410970070531712,
+      -0.22403229506387745
+    ],
+    "n_independent_structures": 512,
+    "bootstrap_repeats": 2000,
+    "dataset_id": "ba010c8282fd41e39fa44afa822ba0658ce29e8a99edd171a1b262ea3e39513d",
+    "split": "test",
+    "view": "full",
+    "metric": "normalized_mae",
+    "condition": "v0.1+v0.2",
+    "difference": "A minus B",
+    "lower_is_better": true,
+    "seed_counts": [
+      1,
+      1
+    ],
+    "per_seed_means": [
+      [
+        0.020212019572065257
+      ],
+      [
+        0.2526474630801745
+      ]
+    ],
+    "uncertainty": "CI resamples structures after averaging runs; training variation is shown separately, not combined"
+  },
+  {
+    "task": "zno",
+    "track": "blind",
+    "evaluation_suite": "v0.1",
+    "mean": -0.24747517362685684,
+    "ci95": [
+      -0.2556796816391869,
+      -0.2389301908772126
+    ],
+    "n_independent_structures": 512,
+    "bootstrap_repeats": 2000,
+    "dataset_id": "5df6908713053b0a12f33d25bebd5207637bc079107f43bdea72dc5dc445a968",
+    "split": "test",
+    "view": "full",
+    "metric": "normalized_mae",
+    "condition": "v0.1",
+    "difference": "A minus B",
+    "lower_is_better": true,
+    "seed_counts": [
+      1,
+      1
+    ],
+    "per_seed_means": [
+      [
+        0.0085664964898527
+      ],
+      [
+        0.25604167011670953
+      ]
+    ],
+    "uncertainty": "CI resamples structures after averaging runs; training variation is shown separately, not combined"
+  },
+  {
+    "task": "zno",
+    "track": "blind",
+    "evaluation_suite": "v0.2",
+    "mean": -0.16445869333207644,
+    "ci95": [
+      -0.1729778855882317,
+      -0.1564479659616604
+    ],
+    "n_independent_structures": 512,
+    "bootstrap_repeats": 2000,
+    "dataset_id": "5df6908713053b0a12f33d25bebd5207637bc079107f43bdea72dc5dc445a968",
+    "split": "test",
+    "view": "full",
+    "metric": "normalized_mae",
+    "condition": "v0.2",
+    "difference": "A minus B",
+    "lower_is_better": true,
+    "seed_counts": [
+      1,
+      1
+    ],
+    "per_seed_means": [
+      [
+        0.09158297678463312
+      ],
+      [
+        0.25604167011670953
+      ]
+    ],
+    "uncertainty": "CI resamples structures after averaging runs; training variation is shown separately, not combined"
+  },
+  {
+    "task": "zno",
+    "track": "blind",
+    "evaluation_suite": "v0.1+v0.2",
+    "mean": -0.20596693347946662,
+    "ci95": [
+      -0.21400587285856018,
+      -0.1979565053563746
+    ],
+    "n_independent_structures": 512,
+    "bootstrap_repeats": 2000,
+    "dataset_id": "5df6908713053b0a12f33d25bebd5207637bc079107f43bdea72dc5dc445a968",
+    "split": "test",
+    "view": "full",
+    "metric": "normalized_mae",
+    "condition": "v0.1+v0.2",
+    "difference": "A minus B",
+    "lower_is_better": true,
+    "seed_counts": [
+      1,
+      1
+    ],
+    "per_seed_means": [
+      [
+        0.05007473663724291
+      ],
+      [
+        0.2560416701167096
+      ]
+    ],
+    "uncertainty": "CI resamples structures after averaging runs; training variation is shown separately, not combined"
+  },
+  {
+    "task": "zno",
+    "track": "calibrated",
+    "evaluation_suite": "v0.1",
+    "mean": -0.2495933714008772,
+    "ci95": [
+      -0.25787337871990634,
+      -0.24106065149391123
+    ],
+    "n_independent_structures": 512,
+    "bootstrap_repeats": 2000,
+    "dataset_id": "2f9fccf9fa421c399884bfbc967e558fd882ad4d7d361210e9b786c763e0673d",
+    "split": "test",
+    "view": "full",
+    "metric": "normalized_mae",
+    "condition": "v0.1",
+    "difference": "A minus B",
+    "lower_is_better": true,
+    "seed_counts": [
+      1,
+      1
+    ],
+    "per_seed_means": [
+      [
+        0.006448298715832357
+      ],
+      [
+        0.25604167011670953
+      ]
+    ],
+    "uncertainty": "CI resamples structures after averaging runs; training variation is shown separately, not combined"
+  },
+  {
+    "task": "zno",
+    "track": "calibrated",
+    "evaluation_suite": "v0.2",
+    "mean": -0.1666078445825792,
+    "ci95": [
+      -0.17507651599834015,
+      -0.15841975816133294
+    ],
+    "n_independent_structures": 512,
+    "bootstrap_repeats": 2000,
+    "dataset_id": "2f9fccf9fa421c399884bfbc967e558fd882ad4d7d361210e9b786c763e0673d",
+    "split": "test",
+    "view": "full",
+    "metric": "normalized_mae",
+    "condition": "v0.2",
+    "difference": "A minus B",
+    "lower_is_better": true,
+    "seed_counts": [
+      1,
+      1
+    ],
+    "per_seed_means": [
+      [
+        0.08943382553413036
+      ],
+      [
+        0.25604167011670953
+      ]
+    ],
+    "uncertainty": "CI resamples structures after averaging runs; training variation is shown separately, not combined"
+  },
+  {
+    "task": "zno",
+    "track": "calibrated",
+    "evaluation_suite": "v0.1+v0.2",
+    "mean": -0.20810060799172816,
+    "ci95": [
+      -0.21623624937728037,
+      -0.20005153147558652
+    ],
+    "n_independent_structures": 512,
+    "bootstrap_repeats": 2000,
+    "dataset_id": "2f9fccf9fa421c399884bfbc967e558fd882ad4d7d361210e9b786c763e0673d",
+    "split": "test",
+    "view": "full",
+    "metric": "normalized_mae",
+    "condition": "v0.1+v0.2",
+    "difference": "A minus B",
+    "lower_is_better": true,
+    "seed_counts": [
+      1,
+      1
+    ],
+    "per_seed_means": [
+      [
+        0.047941062124981365
+      ],
+      [
+        0.2560416701167096
+      ]
+    ],
+    "uncertainty": "CI resamples structures after averaging runs; training variation is shown separately, not combined"
+  }
+]

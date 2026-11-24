@@ -1,0 +1,15 @@
+{
+  "dataset_id": "ba010c8282fd41e39fa44afa822ba0658ce29e8a99edd171a1b262ea3e39513d",
+  "task": "rutile",
+  "track": "calibrated",
+  "best_epoch": 83,
+  "best_validation_normalized_mae": 0.020576445599241804,
+  "initial_validation_normalized_mae": 0.25408367626369,
+  "epochs_completed": 100,
+  "optimizer_steps": 7900,
+  "stop_reason": "epoch_limit",
+  "training_wall_seconds": 320.34434550162405,
+  "trainable_parameters": 3085282,
+  "training_seed": 0,
+  "test_labels_read": false
+}

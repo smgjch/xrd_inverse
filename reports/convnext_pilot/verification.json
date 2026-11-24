@@ -1,0 +1,168 @@
+{
+  "recorded_at_utc": "2026-11-24",
+  "scope": "ConvNeXt1D-Lattice seed-0 union-trained synthetic pilot; four independent fits",
+  "software_version": "0.2.1",
+  "numerical_protocol": "xrdbench-0.2.0",
+  "automated_tests": {
+    "command": "python -m pytest -q",
+    "passed": 30,
+    "elapsed_seconds": 18.92,
+    "torch": "2.7.1",
+    "optional_baseline_tests_included": true
+  },
+  "cpu_integration": {
+    "passed": true,
+    "architecture": "tiny test configuration, not scored as formal baseline",
+    "steps": "train -> validation-selected checkpoint -> val/test export -> score -> three-domain summarize",
+    "training_epochs": 2
+  },
+  "wheel_build": {
+    "passed": true,
+    "training_module_and_adapter_packaged": true,
+    "upstream_license_packaged": true
+  },
+  "npu_smoke": {
+    "passed": true,
+    "device": "npu:0",
+    "torch": "2.7.1+cpu",
+    "parameters": 3085282,
+    "losses": [
+      0.05730453133583069,
+      0.0037796550896018744,
+      0.002431502565741539,
+      0.004197278991341591,
+      0.0018611906562000513,
+      0.000917477416805923,
+      0.002100112149491906,
+      0.0007470181444659829
+    ],
+    "step_seconds": [
+      0.6494659651070833,
+      0.01064577978104353,
+      0.010117624886333942,
+      0.010053220205008984,
+      0.009736218489706516,
+      0.010153950192034245,
+      0.009433059021830559,
+      0.009776771999895573
+    ],
+    "hardware": "Ascend910B2C"
+  },
+  "npu_two_epoch_debug": {
+    "dataset_id": "73a358b50688e514a8d7f95d45069edc70a5c23bcbd2ab5b9127cef3b62111c3",
+    "task": "rutile",
+    "track": "blind",
+    "best_epoch": 2,
+    "best_validation_normalized_mae": 0.21652799441168705,
+    "initial_validation_normalized_mae": 0.25407411499569815,
+    "epochs_completed": 2,
+    "optimizer_steps": 158,
+    "stop_reason": "epoch_limit",
+    "training_wall_seconds": 8.916422794573009,
+    "trainable_parameters": 3085282,
+    "training_seed": 0,
+    "test_labels_read": false
+  },
+  "formal_training": {
+    "fitted_models": 4,
+    "training_seed": 0,
+    "completed_accelerator_jobs": 2,
+    "peak_parallel_accelerators": 2,
+    "hardware_resource_flavor": "Ascend910B2",
+    "all_jobs_status": "done",
+    "new_test_guided_tuning_runs": 0
+  },
+  "training_source_archive": {
+    "archive": "convnext-source-v1.tar.gz",
+    "sha256": "b453494d569ededa1c7585289707b3c88e9b4c11cbb76e353194acac034690c1",
+    "files": 32
+  },
+  "checkpoint_and_module_hash_audit": [
+    {
+      "task": "rutile",
+      "track": "blind",
+      "checkpoint_sha256": "ba1fbab8f21e429d5d251e43319dc85f75acf269462085a0d5de6cb0ba129ccb",
+      "code_sha256": "b1af71357c1f849d4a1d6715bdaaaade68f120f065f5b3ba741615fc9d21cfe5",
+      "prediction_checkpoint_hash_matches": true
+    },
+    {
+      "task": "rutile",
+      "track": "calibrated",
+      "checkpoint_sha256": "f23feba31014f65797d53a3dae51125ef5f2a46d08bfafa1cc05ed85b20d7e36",
+      "code_sha256": "b1af71357c1f849d4a1d6715bdaaaade68f120f065f5b3ba741615fc9d21cfe5",
+      "prediction_checkpoint_hash_matches": true
+    },
+    {
+      "task": "zno",
+      "track": "blind",
+      "checkpoint_sha256": "041e8228b03824d75b817aca196063fe82741d3c0ceaccf336b9d5e0da5113d7",
+      "code_sha256": "b1af71357c1f849d4a1d6715bdaaaade68f120f065f5b3ba741615fc9d21cfe5",
+      "prediction_checkpoint_hash_matches": true
+    },
+    {
+      "task": "zno",
+      "track": "calibrated",
+      "checkpoint_sha256": "5abd873b2a7f6911af5ae3d0cf6a19d12f7d4d2dc3d27892c66fc63890ee9589",
+      "code_sha256": "b1af71357c1f849d4a1d6715bdaaaade68f120f065f5b3ba741615fc9d21cfe5",
+      "prediction_checkpoint_hash_matches": true
+    }
+  ],
+  "validation_checkpoint_roundtrip": [
+    {
+      "task": "rutile",
+      "track": "blind",
+      "training_best_validation_normalized_mae": 0.02377048220175008,
+      "exported_validation_normalized_mae": 0.023770482032302715,
+      "absolute_difference": 1.6944736586088638e-10,
+      "passed": true
+    },
+    {
+      "task": "rutile",
+      "track": "calibrated",
+      "training_best_validation_normalized_mae": 0.020576445599241804,
+      "exported_validation_normalized_mae": 0.020576445221790696,
+      "absolute_difference": 3.7745110856302055e-10,
+      "passed": true
+    },
+    {
+      "task": "zno",
+      "track": "blind",
+      "training_best_validation_normalized_mae": 0.047221286105923355,
+      "exported_validation_normalized_mae": 0.047221285977279225,
+      "absolute_difference": 1.2864413007074305e-10,
+      "passed": true
+    },
+    {
+      "task": "zno",
+      "track": "calibrated",
+      "training_best_validation_normalized_mae": 0.04553651708799104,
+      "exported_validation_normalized_mae": 0.04553651736455283,
+      "absolute_difference": 2.7656179429902394e-10,
+      "passed": true
+    }
+  ],
+  "held_out_scoring": {
+    "test_observations_per_model": 8704,
+    "validation_observations_per_model": 6144,
+    "scored_model_submissions": 4,
+    "matched_prior_controls": 4,
+    "matrix_rows": 24,
+    "conditions_rows": 136,
+    "all_submission_validation_passed": true
+  },
+  "gitignore": {
+    "checked_excluded_examples": 8,
+    "checked_public_examples": 6,
+    "passed": true
+  },
+  "limitations": [
+    "One training seed only; bootstrap intervals exclude training-seed variance.",
+    "Synthetic pilot only; not a main-size or real-experiment result.",
+    "No other trained baseline or cVAE is evaluated in this run.",
+    "No blind nuisance marginalization or physics refinement is used by this regressor."
+  ],
+  "published_csv": {
+    "line_endings": "LF",
+    "parsed_values_identical_to_original_scorer_output": true
+  }
+}

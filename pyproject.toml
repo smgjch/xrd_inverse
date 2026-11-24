@@ -12,9 +12,13 @@ dependencies = ["numpy==1.26.4", "scipy==1.14.1", "pymatgen==2024.11.13", "monty
 [project.optional-dependencies]
 test = ["pytest==8.3.4"]
 hub = ["huggingface_hub>=0.36,<2"]
+baseline = ["torch>=2.7,<2.8"]
 
 [project.scripts]
 xrdbench = "xrdbench.cli:main"
+
+[tool.setuptools]
+license-files = ["THIRD_PARTY_LICENSES/*.txt"]
 
 [tool.setuptools.packages.find]
 include = ["xrdbench*"]

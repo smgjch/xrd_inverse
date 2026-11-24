@@ -1,0 +1,15 @@
+{
+  "dataset_id": "5df6908713053b0a12f33d25bebd5207637bc079107f43bdea72dc5dc445a968",
+  "task": "zno",
+  "track": "blind",
+  "best_epoch": 57,
+  "best_validation_normalized_mae": 0.047221286105923355,
+  "initial_validation_normalized_mae": 0.25221320055425167,
+  "epochs_completed": 77,
+  "optimizer_steps": 6083,
+  "stop_reason": "validation_patience",
+  "training_wall_seconds": 241.99901947844774,
+  "trainable_parameters": 3085282,
+  "training_seed": 0,
+  "test_labels_read": false
+}

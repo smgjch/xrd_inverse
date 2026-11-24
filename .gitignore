@@ -34,6 +34,7 @@ dist/
 *.pt
 *.pth
 *.ckpt
+*.tmp
 *.safetensors
 *.h5
 *.hdf5

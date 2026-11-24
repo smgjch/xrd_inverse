@@ -1,8 +1,8 @@
 # 结果与验证记录
 
-当前交付的是 benchmark v0.2、pilot 数据与评测工具。**尚无合作者提交的已训练 baseline 成绩，本轮没有训练模型或提交加速卡任务。**
+benchmark v0.2 创建阶段仅交付数据与评测工具。后续已增加 [ConvNeXt1D-Lattice 的单 seed pilot 成绩](convnext_pilot/README.md)：两个原型 × 两条赛道，各自使用联合版本训练，并分别报告 v0.1、v0.2 和联合测试域。其他已规划 baseline 尚未完成评测；当前结果不构成方法间排名。
 
-`data_release_index.json` 登记共同数据版本；`tool_validation.json` 记录软件、兼容性、数据一致性检查。它们不是模型性能表。
+`data_release_index.json` 登记共同数据版本；`tool_validation.json` 记录 benchmark 创建时的软件、兼容性、数据一致性检查。它们不是模型性能表，也不回写为后续训练的验证记录。
 
 合作者完成模型推理并使用公开测试标签完成 `xrdbench score` 后，运行：
 

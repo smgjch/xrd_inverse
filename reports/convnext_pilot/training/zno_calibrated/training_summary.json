@@ -1,0 +1,15 @@
+{
+  "dataset_id": "2f9fccf9fa421c399884bfbc967e558fd882ad4d7d361210e9b786c763e0673d",
+  "task": "zno",
+  "track": "calibrated",
+  "best_epoch": 88,
+  "best_validation_normalized_mae": 0.04553651708799104,
+  "initial_validation_normalized_mae": 0.2522139335051179,
+  "epochs_completed": 100,
+  "optimizer_steps": 7900,
+  "stop_reason": "epoch_limit",
+  "training_wall_seconds": 316.8274025544524,
+  "trainable_parameters": 3085282,
+  "training_seed": 0,
+  "test_labels_read": false
+}

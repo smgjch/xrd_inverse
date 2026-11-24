@@ -1,0 +1,15 @@
+{
+  "dataset_id": "73a358b50688e514a8d7f95d45069edc70a5c23bcbd2ab5b9127cef3b62111c3",
+  "task": "rutile",
+  "track": "blind",
+  "best_epoch": 77,
+  "best_validation_normalized_mae": 0.02377048220175008,
+  "initial_validation_normalized_mae": 0.25407411499569815,
+  "epochs_completed": 97,
+  "optimizer_steps": 7663,
+  "stop_reason": "validation_patience",
+  "training_wall_seconds": 302.81768807023764,
+  "trainable_parameters": 3085282,
+  "training_seed": 0,
+  "test_labels_read": false
+}
