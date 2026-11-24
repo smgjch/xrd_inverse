@@ -1,0 +1,236 @@
+{
+  "recorded_at_utc": "2026-11-24",
+  "scope": "Conditional NSF / single-round NPE seed-0 union-trained synthetic pilot; four independent fits",
+  "software_version": "0.2.1",
+  "numerical_protocol": "xrdbench-0.2.0",
+  "automated_tests": {
+    "command": "PYTHONPATH=. python -m pytest -q",
+    "passed": 36,
+    "elapsed_seconds": 19.69,
+    "torch": "2.7.1",
+    "optional_baseline_tests_included": true
+  },
+  "nsf_tests": {
+    "passed": 6,
+    "elapsed_seconds": 20.73,
+    "includes": [
+      "spline inverse",
+      "autograd Jacobian",
+      "integrated scalar density",
+      "full-flow Jacobian",
+      "conditional toy learning",
+      "energy definition",
+      "seed-prefix consistency",
+      "training with test labels removed",
+      "adapter and unified posterior scoring"
+    ]
+  },
+  "wheel_build": {
+    "passed": true,
+    "training_module_and_adapter_packaged": true,
+    "upstream_license_packaged": true
+  },
+  "npu_smoke": {
+    "passed": true,
+    "device": "npu:0",
+    "torch": "2.7.1+cpu",
+    "parameters": 3303286,
+    "losses": [
+      3.3527612686157227e-08,
+      -0.02443895861506462,
+      -0.05940615385770798,
+      -0.11434982717037201,
+      -0.20938825607299805,
+      -0.36861521005630493,
+      -0.6124775409698486,
+      -0.9394060373306274
+    ],
+    "step_seconds": [
+      0.7691081389784813,
+      0.03640190698206425,
+      0.03669244144111872,
+      0.02629232406616211,
+      0.027735990472137928,
+      0.027595517225563526,
+      0.02474803850054741,
+      0.02725464664399624
+    ],
+    "sample_and_roundtrip_seconds": 0.015112778171896935,
+    "max_roundtrip_error": 1.7881393432617188e-07,
+    "sample_shape": [
+      16,
+      256,
+      2
+    ],
+    "hardware": "Ascend910B2C"
+  },
+  "npu_two_epoch_debug": {
+    "dataset_id": "73a358b50688e514a8d7f95d45069edc70a5c23bcbd2ab5b9127cef3b62111c3",
+    "task": "rutile",
+    "track": "blind",
+    "best_epoch": 1,
+    "best_validation": {
+      "val_nll_unit": -0.0015586828618931274,
+      "val_energy_score": 0.2624170547351241,
+      "val_normalized_mae": 0.25465922119716805
+    },
+    "initial_validation": {
+      "val_nll_unit": 2.945307648697752e-08,
+      "val_energy_score": 0.262425247579813,
+      "val_normalized_mae": 0.25462313555181026
+    },
+    "epochs_completed": 2,
+    "optimizer_steps": 158,
+    "stop_reason": "epoch_limit",
+    "training_wall_seconds": 13.32715466991067,
+    "trainable_parameters": 3303286,
+    "training_seed": 0,
+    "test_labels_read": false
+  },
+  "formal_training": {
+    "fitted_models": 4,
+    "training_seed": 0,
+    "completed_accelerator_jobs": 2,
+    "peak_parallel_accelerators": 2,
+    "hardware_resource_flavor": "Ascend910B2",
+    "all_jobs_status": "done",
+    "hyperparameter_trials_per_fit": 1,
+    "new_test_guided_tuning_runs": 0,
+    "total_training_wall_seconds": 1658.5498859919608
+  },
+  "training_source_archive": {
+    "archive": "nsf-source-v1.tar.gz",
+    "sha256": "855568ac60aaede2415ce94a6b176ef299f3fc8d25b80c802d9d4165493ccf39",
+    "files": 31
+  },
+  "floating_point_support_audit": [
+    {
+      "task": "rutile",
+      "track": "blind",
+      "test_samples_including_ood_stress": 2228224,
+      "samples_outside_exact_prior": 1,
+      "maximum_overshoot_in_prior_width_units": 3.5762786839310413e-07,
+      "posthoc_clipping": false
+    },
+    {
+      "task": "rutile",
+      "track": "calibrated",
+      "test_samples_including_ood_stress": 2228224,
+      "samples_outside_exact_prior": 0,
+      "maximum_overshoot_in_prior_width_units": 0.0,
+      "posthoc_clipping": false
+    },
+    {
+      "task": "zno",
+      "track": "blind",
+      "test_samples_including_ood_stress": 2228224,
+      "samples_outside_exact_prior": 0,
+      "maximum_overshoot_in_prior_width_units": 0.0,
+      "posthoc_clipping": false
+    },
+    {
+      "task": "zno",
+      "track": "calibrated",
+      "test_samples_including_ood_stress": 2228224,
+      "samples_outside_exact_prior": 1,
+      "maximum_overshoot_in_prior_width_units": 1.1920928896695314e-07,
+      "posthoc_clipping": false
+    }
+  ],
+  "checkpoint_and_module_hash_audit": [
+    {
+      "task": "rutile",
+      "track": "blind",
+      "checkpoint_sha256": "15ef2bfb3ae8204de29284a174a6676613f9da7809986f39a245ed74be9a6cdf",
+      "code_sha256": "fc50f2c5091c2c936613daa71ec2284a68230e83c9d684a01bcbbb9272f1373e",
+      "prediction_checkpoint_hash_matches": true,
+      "source_matches_training_fingerprint": true
+    },
+    {
+      "task": "rutile",
+      "track": "calibrated",
+      "checkpoint_sha256": "d144e1689c3ac9fc00f626744de2551b08a0efa19c0e2b6092014072233942b0",
+      "code_sha256": "fc50f2c5091c2c936613daa71ec2284a68230e83c9d684a01bcbbb9272f1373e",
+      "prediction_checkpoint_hash_matches": true,
+      "source_matches_training_fingerprint": true
+    },
+    {
+      "task": "zno",
+      "track": "blind",
+      "checkpoint_sha256": "b8a71a6740ff1d15171d3b5f275361f1e7b87f6456470f6c696df27258bcde2d",
+      "code_sha256": "fc50f2c5091c2c936613daa71ec2284a68230e83c9d684a01bcbbb9272f1373e",
+      "prediction_checkpoint_hash_matches": true,
+      "source_matches_training_fingerprint": true
+    },
+    {
+      "task": "zno",
+      "track": "calibrated",
+      "checkpoint_sha256": "bb8573db484f277d82e21c8a54582072f347622356354a79536fd13217036902",
+      "code_sha256": "fc50f2c5091c2c936613daa71ec2284a68230e83c9d684a01bcbbb9272f1373e",
+      "prediction_checkpoint_hash_matches": true,
+      "source_matches_training_fingerprint": true
+    }
+  ],
+  "validation_checkpoint_roundtrip": [
+    {
+      "task": "rutile",
+      "track": "blind",
+      "training_selected_validation_energy": 0.025774521791997056,
+      "exported_validation_energy": 0.02579330021451588,
+      "absolute_difference": 1.8778422518822557e-05,
+      "note": "Training and exported validation use independent fixed base samples; exact numeric equality is not expected."
+    },
+    {
+      "task": "rutile",
+      "track": "calibrated",
+      "training_selected_validation_energy": 0.02567409126398464,
+      "exported_validation_energy": 0.025698626057076523,
+      "absolute_difference": 2.45347930918835e-05,
+      "note": "Training and exported validation use independent fixed base samples; exact numeric equality is not expected."
+    },
+    {
+      "task": "zno",
+      "track": "blind",
+      "training_selected_validation_energy": 0.04793345567304641,
+      "exported_validation_energy": 0.047794880994708265,
+      "absolute_difference": 0.00013857467833814502,
+      "note": "Training and exported validation use independent fixed base samples; exact numeric equality is not expected."
+    },
+    {
+      "task": "zno",
+      "track": "calibrated",
+      "training_selected_validation_energy": 0.04700407890292505,
+      "exported_validation_energy": 0.04694522230798125,
+      "absolute_difference": 5.885659494379858e-05,
+      "note": "Training and exported validation use independent fixed base samples; exact numeric equality is not expected."
+    }
+  ],
+  "held_out_scoring": {
+    "test_observations_per_model": 8704,
+    "validation_observations_per_model": 6144,
+    "posterior_samples_per_observation": 256,
+    "scored_nsf_submissions": 4,
+    "matched_prior_sampler_controls": 4,
+    "matched_prior_mean_controls": 4,
+    "frozen_convnext_submissions": 4,
+    "matrix_rows": 48,
+    "conditions_rows": 272,
+    "all_submission_validation_passed": true
+  },
+  "limitations": [
+    "One training seed only; structure bootstrap excludes training-seed uncertainty.",
+    "Synthetic pilot only; no main-size or real-experiment evaluation.",
+    "Shared encoder and fixed data, but loss, optimizer recipe and checkpoint criteria differ from point regression.",
+    "No certified numerical physical posterior or cVAE comparison is available.",
+    "No physics postprocessing, special no-signal fallback or test-guided tuning."
+  ],
+  "published_csv": {
+    "line_endings": "LF",
+    "parsed_values_identical_to_original_scorer_output": true
+  },
+  "gitignore": {
+    "checked_excluded_examples": 8,
+    "checked_public_examples": 7,
+    "passed": true
+  }
+}

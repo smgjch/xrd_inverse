@@ -1,0 +1,23 @@
+{
+  "dataset_id": "2f9fccf9fa421c399884bfbc967e558fd882ad4d7d361210e9b786c763e0673d",
+  "task": "zno",
+  "track": "calibrated",
+  "best_epoch": 100,
+  "best_validation": {
+    "val_nll_unit": -5.582372138897578,
+    "val_energy_score": 0.04700407890292505,
+    "val_normalized_mae": 0.04720766694905857
+  },
+  "initial_validation": {
+    "val_nll_unit": 3.0267983804529074e-08,
+    "val_energy_score": 0.26306438135604066,
+    "val_normalized_mae": 0.2533221502477924
+  },
+  "epochs_completed": 100,
+  "optimizer_steps": 7900,
+  "stop_reason": "epoch_limit",
+  "training_wall_seconds": 410.32524768449366,
+  "trainable_parameters": 3303286,
+  "training_seed": 0,
+  "test_labels_read": false
+}

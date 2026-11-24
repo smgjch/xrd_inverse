@@ -1,0 +1,96 @@
+{
+  "selection_rule": "Lexicographically first held-out structure group per task, chosen without using error or coverage. Calibrated track. Same structure across columns.",
+  "note": "Samples of an estimated posterior, not certified physical ground-truth posteriors.",
+  "examples": [
+    {
+      "task": "rutile",
+      "track": "calibrated",
+      "condition": "full_standard",
+      "group_id": "rutile:test:00000000",
+      "observation_id": "rutile:test:00000000:full_standard:1",
+      "theta_angstrom": [
+        4.3730844530459825,
+        3.0487951916225677
+      ],
+      "sample_median_angstrom": [
+        4.371308921917547,
+        3.0485448733499645
+      ]
+    },
+    {
+      "task": "rutile",
+      "track": "calibrated",
+      "condition": "hard_mixed_e100",
+      "group_id": "rutile:test:00000000",
+      "observation_id": "rutile:test:00000000:hard_mixed_e100:0",
+      "theta_angstrom": [
+        4.3730844530459825,
+        3.0487951916225677
+      ],
+      "sample_median_angstrom": [
+        4.495616889528185,
+        3.0133486739706994
+      ]
+    },
+    {
+      "task": "rutile",
+      "track": "calibrated",
+      "condition": "hard_paired_e1000",
+      "group_id": "rutile:test:00000000",
+      "observation_id": "rutile:test:00000000:hard_paired_e1000:5",
+      "theta_angstrom": [
+        4.3730844530459825,
+        3.0487951916225677
+      ],
+      "sample_median_angstrom": [
+        4.374996943914928,
+        3.0477374621513484
+      ]
+    },
+    {
+      "task": "zno",
+      "track": "calibrated",
+      "condition": "full_standard",
+      "group_id": "zno:test:00000000",
+      "observation_id": "zno:test:00000000:full_standard:1",
+      "theta_angstrom": [
+        3.141751335191156,
+        4.982567843701259
+      ],
+      "sample_median_angstrom": [
+        3.1417050626005976,
+        4.98255288326677
+      ]
+    },
+    {
+      "task": "zno",
+      "track": "calibrated",
+      "condition": "hard_mixed_e100",
+      "group_id": "zno:test:00000000",
+      "observation_id": "zno:test:00000000:hard_mixed_e100:0",
+      "theta_angstrom": [
+        3.141751335191156,
+        4.982567843701259
+      ],
+      "sample_median_angstrom": [
+        3.122171927413344,
+        5.013599771185368
+      ]
+    },
+    {
+      "task": "zno",
+      "track": "calibrated",
+      "condition": "hard_paired_e1000",
+      "group_id": "zno:test:00000000",
+      "observation_id": "zno:test:00000000:hard_paired_e1000:5",
+      "theta_angstrom": [
+        3.141751335191156,
+        4.982567843701259
+      ],
+      "sample_median_angstrom": [
+        3.142158126396313,
+        4.974311297972985
+      ]
+    }
+  ]
+}

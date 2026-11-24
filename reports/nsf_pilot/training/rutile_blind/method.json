@@ -1,0 +1,68 @@
+{
+  "method_name": "Conditional-NSF-NPE",
+  "implementation": "bounded_rational_quadratic_coupling_flow_shared_convnext_encoder",
+  "source_repository": "https://github.com/bayesiains/nflows",
+  "upstream_commit": "5d22344436a4a5f4c3b93a3b99322a6bfe374c08",
+  "encoder_source_repository": "https://github.com/AdvancedPhotonSource/OpenAlphaDiffract",
+  "encoder_upstream_commit": "ec118b9d899f57e8971a7ad4d4aa23b3f38572e0",
+  "code_commit": "fc50f2c5091c2c936613daa71ec2284a68230e83c9d684a01bcbbb9272f1373e",
+  "training_dataset_id": "73a358b50688e514a8d7f95d45069edc70a5c23bcbd2ab5b9127cef3b62111c3",
+  "training_suite": "v0.1+v0.2",
+  "training_seed": 0,
+  "unique_train_structures": 5000,
+  "train_observations": 10000,
+  "extra_simulations": 0,
+  "external_pretraining": false,
+  "postprocessing": "none",
+  "point_rule": "sample_marginal_median",
+  "hardware": "Ascend910B2C",
+  "precision": "float32",
+  "hyperparameter_trials": 1,
+  "trainable_parameters": 3303286,
+  "checkpoint_selection": "minimum_validation_energy_score_256_fixed_base_samples",
+  "hyperparameters": {
+    "model": {
+      "dims": [
+        48,
+        96,
+        192
+      ],
+      "depths": [
+        2,
+        2,
+        4
+      ],
+      "kernel_size": 7,
+      "pool_bins": 16,
+      "head_dim": 512,
+      "dropout": 0.1,
+      "drop_path": 0.05,
+      "layer_scale": 0.001,
+      "input_bins": 4096,
+      "output_dim": 2
+    },
+    "flow": {
+      "layers": 6,
+      "bins": 8,
+      "hidden": 128,
+      "context_dim": 128
+    },
+    "epochs_limit": 100,
+    "batch_size": 128,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.0001,
+    "loss": "exact_negative_log_density_in_prior_unit_coordinates",
+    "base_distribution": "Uniform([0,1]^2)",
+    "warmup_epochs": 3,
+    "schedule": "cosine",
+    "patience_validation_checks": 8,
+    "validate_every_epochs": 5,
+    "validation_samples": 256,
+    "max_seconds": 3500.0
+  },
+  "notes": "Single-round NPE, same fixed pairs and ConvNeXt encoder as point baseline; trained from scratch. No sbi runtime or original-paper XRD reproduction claim.",
+  "training_wall_seconds": 420.7052703490481,
+  "selected_epoch": 95,
+  "optimizer_steps": 7900,
+  "checkpoint_sha256": "15ef2bfb3ae8204de29284a174a6676613f9da7809986f39a245ed74be9a6cdf"
+}

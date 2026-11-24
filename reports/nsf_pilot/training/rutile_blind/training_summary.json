@@ -1,0 +1,23 @@
+{
+  "dataset_id": "73a358b50688e514a8d7f95d45069edc70a5c23bcbd2ab5b9127cef3b62111c3",
+  "task": "rutile",
+  "track": "blind",
+  "best_epoch": 95,
+  "best_validation": {
+    "val_nll_unit": -5.586817264556885,
+    "val_energy_score": 0.025774521791997056,
+    "val_normalized_mae": 0.023533462663181126
+  },
+  "initial_validation": {
+    "val_nll_unit": 2.945307648697752e-08,
+    "val_energy_score": 0.262425247579813,
+    "val_normalized_mae": 0.25462313555181026
+  },
+  "epochs_completed": 100,
+  "optimizer_steps": 7900,
+  "stop_reason": "epoch_limit",
+  "training_wall_seconds": 420.7052703490481,
+  "trainable_parameters": 3303286,
+  "training_seed": 0,
+  "test_labels_read": false
+}

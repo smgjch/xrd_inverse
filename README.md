@@ -4,7 +4,7 @@
 
 v0.2 加入固定有限角度窗口、低计数与未知仪器参数，保留 v0.1。支持用**一份联合测试预测**分别汇报 v0.1、v0.2、等权联合成绩。
 
-仓库提供统一评测工具及一个已训练的 ConvNeXt1D 回归 pilot；其他方法由合作者接入。接口验证与真实模型成绩分别记录。
+仓库提供统一评测工具、ConvNeXt1D 点回归和 Conditional NSF / NPE 后验估计基线；其他方法由合作者接入。接口验证与真实模型成绩分别记录。
 
 **完整 pilot 数据（含 train / validation / test 和全部标签）已发布至 [Hugging Face](https://huggingface.co/datasets/smgjch/PXRD-LatticeBench)。** 数据版本为 `v0.2-pilot`，工具版本为 `0.2.1`。GitHub 保存源码与协议，数据文件从 Hugging Face 下载。
 
@@ -12,6 +12,8 @@ v0.2 加入固定有限角度窗口、低计数与未知仪器参数，保留 v0
 - [v0.1 完整实验协议、指标与方法迁移指南](docs/实验协议与接入指南.md)
 - [ConvNeXt1D 回归基线：模型、训练与评测](docs/ConvNeXt基线.md)
 - [ConvNeXt1D pilot 测试成绩与训练曲线](reports/convnext_pilot/README.md)
+- [Conditional NSF / NPE：模型、训练与评测](docs/NSF基线.md)
+- [NSF pilot：后验、点预测与配对比较](reports/nsf_pilot/README.md)
 - [方法元数据模板](examples/method_metadata.json)
 - [离线预测导出](examples/export_npz.py)
 - [数据下载、字段说明与 Hugging Face 用法](docs/数据下载与使用.md)
