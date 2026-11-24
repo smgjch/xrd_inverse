@@ -12,6 +12,10 @@ import numpy as np
 from .protocol import digest, rng_seed
 
 
+def normalize_split(split):
+    return "val" if split == "validation" else split
+
+
 def write_json(path, obj):
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -78,6 +82,7 @@ def checked_load(root, record):
 
 
 def iter_observations(public, split, view="full"):
+    split = normalize_split(split)
     meta = manifest(public)
     if view not in ("full", "physics128"):
         raise ValueError("Unknown view; use full or physics128")
@@ -106,10 +111,11 @@ def concatenate(parts):
 
 
 def load_targets(public, split, private=None):
+    split = normalize_split(split)
     meta = manifest(public)
     if split == "test":
         if private is None:
-            raise ValueError("Coordinator must provide --private for test scoring")
+            raise ValueError("Provide --private pointing to the published test-label directory")
         secret = read_json(Path(private) / "manifest.json")
         if secret["dataset_id"] != meta["dataset_id"]:
             raise ValueError("Private labels belong to another dataset")

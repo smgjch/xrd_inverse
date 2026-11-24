@@ -27,6 +27,10 @@ dist/
 /tmp/
 *.npz
 *.npy
+*.parquet
+*.arrow
+/.cache/
+/hf_cache/
 *.pt
 *.pth
 *.ckpt

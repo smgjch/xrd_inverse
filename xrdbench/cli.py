@@ -3,7 +3,8 @@ import json
 
 from .data import audit, generate
 from .evaluate import compare, score
-from .io import read_json
+from .io import read_json, normalize_split
+from .hub import DATASET_REVISION, download
 from .reference import grid_reference
 from .submission import run, validate_submission
 from .reporting import summarize_scores
@@ -19,13 +20,21 @@ def main():
     gen.add_argument("--preset", choices=["smoke", "pilot", "main"], default="smoke")
     gen.add_argument("--shard-size", type=int, default=256)
     gen.add_argument("--suite", choices=["v0.1", "v0.2", "v0.1+v0.2"], default="v0.1")
+    fetch = commands.add_parser("download", help="Download frozen Hub data, including all test labels")
+    fetch.add_argument("--output", required=True)
+    fetch.add_argument("--task", choices=["rutile", "zno"], default="rutile")
+    fetch.add_argument("--track", choices=["calibrated", "blind"], default="calibrated")
+    fetch.add_argument("--suite", choices=["v0.1", "v0.2", "v0.1+v0.2"], default="v0.1+v0.2")
+    fetch.add_argument("--all", dest="all_releases", action="store_true")
+    fetch.add_argument("--revision", default=DATASET_REVISION)
+    fetch.add_argument("--cache-dir")
     check = commands.add_parser("audit")
     check.add_argument("--public", required=True); check.add_argument("--private")
     infer = commands.add_parser("run")
     infer.add_argument("--public", required=True); infer.add_argument("--output", required=True)
     infer.add_argument("--adapter", required=True)
     infer.add_argument("--kind", choices=["point", "posterior", "candidates"], required=True)
-    infer.add_argument("--split", choices=["val", "test"], default="test")
+    infer.add_argument("--split", choices=["val", "validation", "test"], default="test")
     infer.add_argument("--view", choices=["full", "physics128"], default="full")
     infer.add_argument("--seed", type=int, default=0); infer.add_argument("--batch-size", type=int, default=32)
     infer.add_argument("--checkpoint"); infer.add_argument("--metadata")
@@ -44,9 +53,11 @@ def main():
     report.add_argument("--output", required=True)
     grid = commands.add_parser("reference-grid")
     grid.add_argument("--public", required=True); grid.add_argument("--output", required=True)
-    grid.add_argument("--sample-id"); grid.add_argument("--split", default="test", choices=["val", "test"])
+    grid.add_argument("--sample-id"); grid.add_argument("--split", default="test", choices=["val", "validation", "test"])
     grid.add_argument("--points", type=int, default=65)
     args = vars(parser.parse_args()); command = args.pop("command")
+    if "split" in args:
+        args["split"] = normalize_split(args["split"])
     if command == "run" and args["metadata"]:
         args["metadata"] = read_json(args["metadata"])
     if command == "validate":
@@ -56,6 +67,8 @@ def main():
         result = compare(**args)
     elif command == "summarize":
         result = summarize_scores(**args)
+    elif command == "download":
+        result = download(**args)
     else:
         result = {"generate": generate, "audit": audit, "run": run, "score": score, "reference-grid": grid_reference}[command](**args)
     print(json.dumps(result, ensure_ascii=False, indent=2, allow_nan=False))

@@ -9,7 +9,7 @@ import numpy as np
 
 from .api import make_batch, make_context, sample_seeds
 from .io import (checked_load, concatenate, file_hash, iter_observations, manifest,
-                 read_json, save_npz, write_json)
+                 read_json, save_npz, write_json, normalize_split)
 from .protocol import SAMPLES, VERSION
 
 
@@ -43,6 +43,7 @@ def validate_outputs(output, n, d, kind):
 class SubmissionWriter:
     """Use this writer to export predictions from any framework, including offline code."""
     def __init__(self, output, dataset, split, kind, metadata, view="full"):
+        split = normalize_split(split)
         if kind not in ("point", "posterior", "candidates"):
             raise ValueError(kind)
         if split not in ("val", "test"):
@@ -88,6 +89,7 @@ class SubmissionWriter:
 
 
 def run(public, output, adapter, kind, split="test", seed=0, batch_size=32, checkpoint=None, metadata=None, view="full"):
+    split = normalize_split(split)
     if batch_size < 1:
         raise ValueError("batch_size must be positive")
     data = manifest(public)

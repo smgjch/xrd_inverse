@@ -4,13 +4,14 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "xrdbench"
-version = "0.2.0"
+version = "0.2.1"
 description = "Shared simulated PXRD lattice inverse-problem protocol and evaluator"
 requires-python = ">=3.11"
 dependencies = ["numpy==1.26.4", "scipy==1.14.1", "pymatgen==2024.11.13", "monty==2024.10.21", "spglib==2.5.0"]
 
 [project.optional-dependencies]
 test = ["pytest==8.3.4"]
+hub = ["huggingface_hub>=0.36,<2"]
 
 [project.scripts]
 xrdbench = "xrdbench.cli:main"

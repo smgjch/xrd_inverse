@@ -12,7 +12,7 @@ def main():
     p.add_argument("--output", required=True)
     p.add_argument("--metadata", required=True)
     p.add_argument("--kind", required=True, choices=["point", "posterior", "candidates"])
-    p.add_argument("--split", default="test", choices=["val", "test"])
+    p.add_argument("--split", default="test", choices=["val", "validation", "test"])
     p.add_argument("--view", default="full", choices=["full", "physics128"])
     args = p.parse_args()
     data = load_npz(args.input)

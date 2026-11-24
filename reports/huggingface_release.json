@@ -1,0 +1,52 @@
+{
+  "dataset_name": "PXRD-LatticeBench",
+  "repo_id": "smgjch/PXRD-LatticeBench",
+  "url": "https://huggingface.co/datasets/smgjch/PXRD-LatticeBench",
+  "revision": "a7f5ce0c62d7fc5f50f1c2ce2d34b23f2e58a3d2",
+  "tag": "v0.2-pilot",
+  "preset": "pilot",
+  "license": "apache-2.0",
+  "published": true,
+  "recorded_at_utc": "2026-11-24T06:13:33.472529+00:00",
+  "configurations": 12,
+  "splits": [
+    "train",
+    "validation",
+    "test"
+  ],
+  "all_test_labels_public": true,
+  "stored_observation_rows": 238784,
+  "archive_files": 12,
+  "parquet_files": 36,
+  "archive_bytes": 350912558,
+  "parquet_bytes": 276638769,
+  "prepublication_checks": {
+    "all_original_file_checksums": true,
+    "all_parquet_rows_and_columns_roundtrip_exact": true,
+    "structure_splits_disjoint": true,
+    "local_datasets_loader": {
+      "config": "rutile-blind-v01-v02",
+      "train": 10000,
+      "validation": 6144,
+      "test": 8704
+    },
+    "huggingface_dataset_card_validation": "passed",
+    "automated_tests": {
+      "passed": 28,
+      "elapsed_seconds": 31.41,
+      "command": "python -m pytest -q"
+    }
+  },
+  "postpublication_download_verification": {
+    "completed": false,
+    "status": "stopped_at_user_request; prioritize GitHub update"
+  },
+  "training_runs_executed": 0,
+  "accelerator_jobs_submitted": 0,
+  "baseline_results": "awaiting collaborator submissions",
+  "notes": [
+    "private/test is a historical directory name; these test labels are public.",
+    "The 238784 stored rows include shared structures/observations across suites and tracks; they are not independent crystals.",
+    "No main-scale dataset, experimental XRD, or trained model performance is claimed."
+  ]
+}
